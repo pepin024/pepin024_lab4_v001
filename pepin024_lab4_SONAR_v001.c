@@ -1,5 +1,6 @@
 #include <xc.h>
 #include <p24Fxxxx.h>
+#include "../pepin024_lab3_v001.X/pepin024_lab3_delay_v003.h"
 
 void initPing(void){
     TRISBbits.TRISB8 = 0;
@@ -18,4 +19,20 @@ void initPing(void){
     PR2 = 65535;
     T2CONbits.TCKPS = 0b01; //Set prescaler to 1:8
     return;        
+}
+
+unsigned int measRangeFinder(void){
+    T2CONbits.TON = 0;
+    _ICM = 0;
+    
+    while(_ICBNE == 1){
+        int garbage = IC1BUF;
+    }
+    TMR2 = 0;
+    T2CONbits.TON = 1;
+    _ICM = 0x001;
+    
+    //tbd
+    
+    
 }

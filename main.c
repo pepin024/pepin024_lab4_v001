@@ -87,10 +87,17 @@ void loop(void){
     asm("nop");
     asm("nop");
     
-    int i;
-    for(i = 0; i < 255; i++){
-        writePacCol(Wheel(i));
-        delay(10);
+    int color;
+    asm("nop");
+    if(test < 100){
+        color = (test - 10)/3; //converts test to range[0-90]
+        if(color <= 0){
+            color = 0;
+        }
+        writeColor(255 - color, color, 0);
+    }
+    else{
+        writeColor(0,255,0);
     }
     
     return;

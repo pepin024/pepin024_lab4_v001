@@ -57,7 +57,10 @@ unsigned int measRangeFinder(void){
     secondEdge = IC1BUF;
     
     unsigned int result = secondEdge - firstEdge;
-    return result;
+    
+    result = result/11.6;  // 11.6 = (58 * 2)/10 to convert from us
+    
+    return result; //result in mm
     
     
 }

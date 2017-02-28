@@ -18,7 +18,6 @@
       </logicalFolder>
       <itemPath>pepin024_lab4_SERVO_v001.h</itemPath>
       <itemPath>../pepin024_lab3_v001.X/pepin024_lab3_delay_v003.h</itemPath>
-      <itemPath>pepin024_lab4_LED_v001.h</itemPath>
       <itemPath>pepin024_lab4_SONAR_v001.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -43,8 +42,6 @@
       <itemPath>main.c</itemPath>
       <itemPath>pepin024_lab4_SERVO_v001.c</itemPath>
       <itemPath>../pepin024_lab3_v001.X/pepin024_lab3_delay.c</itemPath>
-      <itemPath>pepin024_lab4_LED_v001.s</itemPath>
-      <itemPath>pepin024_lab4_LED_v001.c</itemPath>
       <itemPath>pepin024_lab4_SONAR_v001.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -221,7 +218,6 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>

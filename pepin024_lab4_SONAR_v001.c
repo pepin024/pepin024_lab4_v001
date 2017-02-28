@@ -22,11 +22,13 @@ void initPing(void){
 }
 
 unsigned int measRangeFinder(void){
+    _RB8 = 0;
+    
     T2CONbits.TON = 0;
     _ICM = 0;
     
     while(_ICBNE == 1){
-        int garbage = IC1BUF;
+        int garbage = IC1BUF;  //useless as ICBNE is set to 0 when ICM is set to 0
     }
     TMR2 = 0;
     

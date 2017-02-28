@@ -6,7 +6,7 @@ Tool Name:
 Command:
   -p24FJ64GA002 \
   -o \
-  dist/default/production/pepin024_lab4_v001.X.production.elf \
+  dist/default/debug/pepin024_lab4_v001.X.debug.elf \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/.. \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../support/PIC24E/gld \
@@ -15,20 +15,28 @@ Command:
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../support/dsPIC30F/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/mcc_generated_files/ic1.o \
-  build/default/production/mcc_generated_files/tmr2.o \
-  build/default/production/mcc_generated_files/tmr3.o \
-  build/default/production/mcc_generated_files/pin_manager.o \
-  build/default/production/mcc_generated_files/traps.o \
-  build/default/production/mcc_generated_files/oc1.o \
-  build/default/production/mcc_generated_files/interrupt_manager.o \
-  build/default/production/mcc_generated_files/mcc.o \
-  build/default/production/main.o \
-  build/default/production/pepin024_lab4_SERVO_v001.o \
-  build/default/production/_ext/736341408/pepin024_lab3_delay.o \
-  build/default/production/pepin024_lab4_SONAR_v001.o \
+  build/default/debug/mcc_generated_files/ic1.o \
+  build/default/debug/mcc_generated_files/tmr2.o \
+  build/default/debug/mcc_generated_files/tmr3.o \
+  build/default/debug/mcc_generated_files/pin_manager.o \
+  build/default/debug/mcc_generated_files/traps.o \
+  build/default/debug/mcc_generated_files/oc1.o \
+  build/default/debug/mcc_generated_files/interrupt_manager.o \
+  build/default/debug/mcc_generated_files/mcc.o \
+  build/default/debug/main.o \
+  build/default/debug/pepin024_lab4_SERVO_v001.o \
+  build/default/debug/_ext/736341408/pepin024_lab3_delay.o \
+  build/default/debug/pepin024_lab4_SONAR_v001.o \
+  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00003038.00 \
+  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00003038.01 \
+  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00003038.02 \
+  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00003038.03 \
+  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00003038.04 \
   --defsym=__MPLAB_BUILD=1 \
-  -Tp24FJ64GA002.gld.00 \
+  --defsym=__MPLAB_DEBUG=1 \
+  --defsym=__DEBUG=1 \
+  --defsym=__MPLAB_DEBUGGER_PK3=1 \
+  -Tp24FJ64GA002.gld.05 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -40,10 +48,10 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/production/pepin024_lab4_v001.X.production.map \
+  -Map=dist/default/debug/pepin024_lab4_v001.X.debug.map \
   --report-mem \
   --memorysummary \
-  dist/default/production/memoryfile.xml \
+  dist/default/debug/memoryfile.xml \
   -start-group \
   --library=lega-pic30-elf \
   --library=m-elf \
@@ -69,11 +77,11 @@ Program Memory  [Origin = 0x200, Length = 0xa9fc]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200                0xce           0x135  (309)
-.text                        0x2ce               0x400           0x600  (1536)
-.dinit                       0x6ce                0x28            0x3c  (60)
-.text                        0x6f6                0x66            0x99  (153)
+.text                        0x2ce               0x402           0x603  (1539)
+.dinit                       0x6d0                0x28            0x3c  (60)
+.text                        0x6f8                0x66            0x99  (153)
 
-                 Total program memory used (bytes):          0x80a  (2058) 3%
+                 Total program memory used (bytes):          0x80d  (2061) 3%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0xfc]
@@ -90,12 +98,17 @@ Data Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0             0x2  (2)
-.ndata                       0x802                   0             0x2  (2)
-.nbss                        0x804                   0             0x2  (2)
-.bss                         0x806                   0            0x24  (36)
+reserve_data_0x800           0x800                0x20            0x20  (32)
+reserve_data_0x820           0x820                 0x2             0x2  (2)
+reserve_data_0x822           0x822                 0x2             0x2  (2)
+reserve_data_0x824           0x824                 0x2             0x2  (2)
+reserve_data_0x826           0x826                0x2a            0x2a  (42)
+.nbss                        0x850                   0             0x2  (2)
+.ndata                       0x852                   0             0x2  (2)
+.nbss                        0x854                   0             0x2  (2)
+.bss                         0x856                   0            0x24  (36)
 
-                 Total data memory used (bytes):           0x2a  (42) <1%
+                 Total data memory used (bytes):           0x7a  (122) 1%
 
 
 Dynamic Memory Usage
@@ -103,9 +116,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x82a                              0x1fd6  (8150)
+stack                        0x87a                              0x1f86  (8070)
 
-                 Maximum dynamic memory (bytes):         0x1fd6  (8150)
+                 Maximum dynamic memory (bytes):         0x1f86  (8070)
 
 
 External Symbols in Program Memory (by address):
@@ -158,21 +171,21 @@ External Symbols in Program Memory (by address):
                   0x0005fa                  _IC1_CaptureDataRead
                   0x000602                  _IC1_HasCaptureBufferOverflowed
                   0x00061a                  _IC1_IsCaptureBufferEmpty
-                  0x00062e                  _mSec
-                  0x00064a                  _delay
-                  0x00067e                  __OscillatorFail
-                  0x000686                  __StackError
-                  0x000690                  __AddressError
-                  0x000698                  __MathError
-                  0x0006a0                  _SYSTEM_Initialize
-                  0x0006b4                  _OSCILLATOR_Initialize
-                  0x0006f6                  _main
-                  0x000700                  _setup
-                  0x00070a                  _loop
-                  0x000718                  _initServo
-                  0x00072c                  _setServo
-                  0x000738                  _PIN_MANAGER_Initialize
-                  0x000756                  _INTERRUPT_Initialize
+                  0x000646                  __OscillatorFail
+                  0x00064e                  __StackError
+                  0x000658                  __AddressError
+                  0x000660                  __MathError
+                  0x000668                  _mSec
+                  0x000684                  _delay
+                  0x0006a2                  _SYSTEM_Initialize
+                  0x0006b6                  _OSCILLATOR_Initialize
+                  0x0006f8                  _main
+                  0x000702                  _setup
+                  0x00070c                  _loop
+                  0x00071a                  _initServo
+                  0x00072e                  _setServo
+                  0x00073a                  _PIN_MANAGER_Initialize
+                  0x000758                  _INTERRUPT_Initialize
 
 External Symbols in Program Memory (by name):
 
@@ -183,7 +196,7 @@ External Symbols in Program Memory (by name):
                   0x0005d2                  _IC1_Start
                   0x0005ec                  _IC1_Stop
                   0x0005c2                  _IC1_Tasks
-                  0x000756                  _INTERRUPT_Initialize
+                  0x000758                  _INTERRUPT_Initialize
                   0x00033c                  _OC1_CentreAlignedPWMConfig
                   0x00032a                  _OC1_DualCompareValueSet
                   0x00034e                  _OC1_EdgeAlignedPWMConfig
@@ -196,9 +209,9 @@ External Symbols in Program Memory (by name):
                   0x0002f6                  _OC1_Start
                   0x000310                  _OC1_Stop
                   0x0002e6                  _OC1_Tasks
-                  0x0006b4                  _OSCILLATOR_Initialize
-                  0x000738                  _PIN_MANAGER_Initialize
-                  0x0006a0                  _SYSTEM_Initialize
+                  0x0006b6                  _OSCILLATOR_Initialize
+                  0x00073a                  _PIN_MANAGER_Initialize
+                  0x0006a2                  _SYSTEM_Initialize
                   0x00041a                  _TMR2_Counter16BitGet
                   0x000408                  _TMR2_Counter16BitSet
                   0x000438                  _TMR2_GetElapsedThenClear
@@ -221,24 +234,24 @@ External Symbols in Program Memory (by name):
                   0x0004d4                  _TMR3_Start
                   0x0004e2                  _TMR3_Stop
                   0x00047e                  _TMR3_Tasks_16BitOperation
-                  0x000690                  __AddressError
+                  0x000658                  __AddressError
                   0x0002c8                  __DefaultInterrupt
-                  0x000698                  __MathError
-                  0x00067e                  __OscillatorFail
-                  0x000686                  __StackError
+                  0x000660                  __MathError
+                  0x000646                  __OscillatorFail
+                  0x00064e                  __StackError
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x00064a                  _delay
+                  0x000684                  _delay
                   0x00051a                  _initPing
-                  0x000718                  _initServo
-                  0x00070a                  _loop
-                  0x00062e                  _mSec
-                  0x0006f6                  _main
+                  0x00071a                  _initServo
+                  0x00070c                  _loop
+                  0x000668                  _mSec
+                  0x0006f8                  _main
                   0x00054e                  _measRangeFinder
-                  0x00072c                  _setServo
-                  0x000700                  _setup
+                  0x00072e                  _setServo
+                  0x000702                  _setup
 
 Memory Configuration
 
@@ -255,19 +268,47 @@ CONFIG1          0x00abfe           0x000002
 
 Linker script and memory map
 
-LOAD build/default/production/mcc_generated_files/ic1.o
-LOAD build/default/production/mcc_generated_files/tmr2.o
-LOAD build/default/production/mcc_generated_files/tmr3.o
-LOAD build/default/production/mcc_generated_files/pin_manager.o
-LOAD build/default/production/mcc_generated_files/traps.o
-LOAD build/default/production/mcc_generated_files/oc1.o
-LOAD build/default/production/mcc_generated_files/interrupt_manager.o
-LOAD build/default/production/mcc_generated_files/mcc.o
-LOAD build/default/production/main.o
-LOAD build/default/production/pepin024_lab4_SERVO_v001.o
-LOAD build/default/production/_ext/736341408/pepin024_lab3_delay.o
-LOAD build/default/production/pepin024_lab4_SONAR_v001.o
+LOAD build/default/debug/mcc_generated_files/ic1.o
+LOAD build/default/debug/mcc_generated_files/tmr2.o
+LOAD build/default/debug/mcc_generated_files/tmr3.o
+LOAD build/default/debug/mcc_generated_files/pin_manager.o
+LOAD build/default/debug/mcc_generated_files/traps.o
+LOAD build/default/debug/mcc_generated_files/oc1.o
+LOAD build/default/debug/mcc_generated_files/interrupt_manager.o
+LOAD build/default/debug/mcc_generated_files/mcc.o
+LOAD build/default/debug/main.o
+LOAD build/default/debug/pepin024_lab4_SERVO_v001.o
+LOAD build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+LOAD build/default/debug/pepin024_lab4_SONAR_v001.o
+
+reserve_data_0x800
+                    0x0800         0x20
+                    0x0820                  . = 0x20
+ *fill*             0x0800         0x2000
+
+reserve_data_0x820
+                    0x0820          0x2
+                    0x0822                  . = 0x2
+ *fill*             0x0820          0x200
+
+reserve_data_0x822
+                    0x0822          0x2
+                    0x0824                  . = 0x2
+ *fill*             0x0822          0x200
+
+reserve_data_0x824
+                    0x0824          0x2
+                    0x0826                  . = 0x2
+ *fill*             0x0824          0x200
+
+reserve_data_0x826
+                    0x0826         0x2a
+                    0x0850                  . = 0x2a
+ *fill*             0x0826         0x2a00
                     0x0001                  __MPLAB_BUILD = 0x1
+                    0x0001                  __MPLAB_DEBUG = 0x1
+                    0x0001                  __DEBUG = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
 LOAD pPIC24Fxxx
 LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                     0xabfc                  __CONFIG2 = 0xabfc
@@ -323,75 +364,75 @@ __CONFIG1
 
 .debug_info       0x000000       0x3476
  *(.debug_info)
- .debug_info      0x000000        0x51b build/default/production/mcc_generated_files/ic1.o
- .debug_info      0x00051b        0x63b build/default/production/mcc_generated_files/tmr2.o
- .debug_info      0x000b56        0x629 build/default/production/mcc_generated_files/tmr3.o
- .debug_info      0x00117f        0x202 build/default/production/mcc_generated_files/pin_manager.o
- .debug_info      0x001381        0x388 build/default/production/mcc_generated_files/traps.o
- .debug_info      0x001709        0x695 build/default/production/mcc_generated_files/oc1.o
- .debug_info      0x001d9e         0xe9 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_info      0x001e87        0x1e6 build/default/production/mcc_generated_files/mcc.o
- .debug_info      0x00206d        0x168 build/default/production/main.o
- .debug_info      0x0021d5        0x422 build/default/production/pepin024_lab4_SERVO_v001.o
- .debug_info      0x0025f7        0x2a1 build/default/production/_ext/736341408/pepin024_lab3_delay.o
- .debug_info      0x002898        0xbde build/default/production/pepin024_lab4_SONAR_v001.o
+ .debug_info      0x000000        0x51b build/default/debug/mcc_generated_files/ic1.o
+ .debug_info      0x00051b        0x63b build/default/debug/mcc_generated_files/tmr2.o
+ .debug_info      0x000b56        0x629 build/default/debug/mcc_generated_files/tmr3.o
+ .debug_info      0x00117f        0x202 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_info      0x001381        0x388 build/default/debug/mcc_generated_files/traps.o
+ .debug_info      0x001709        0x695 build/default/debug/mcc_generated_files/oc1.o
+ .debug_info      0x001d9e         0xe9 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x001e87        0x1e6 build/default/debug/mcc_generated_files/mcc.o
+ .debug_info      0x00206d        0x168 build/default/debug/main.o
+ .debug_info      0x0021d5        0x422 build/default/debug/pepin024_lab4_SERVO_v001.o
+ .debug_info      0x0025f7        0x2a1 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+ .debug_info      0x002898        0xbde build/default/debug/pepin024_lab4_SONAR_v001.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xa96
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x120 build/default/production/mcc_generated_files/ic1.o
- .debug_abbrev    0x000120        0x16e build/default/production/mcc_generated_files/tmr2.o
- .debug_abbrev    0x00028e        0x16e build/default/production/mcc_generated_files/tmr3.o
- .debug_abbrev    0x0003fc         0x5d build/default/production/mcc_generated_files/pin_manager.o
- .debug_abbrev    0x000459        0x100 build/default/production/mcc_generated_files/traps.o
- .debug_abbrev    0x000559        0x184 build/default/production/mcc_generated_files/oc1.o
- .debug_abbrev    0x0006dd         0x34 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_abbrev    0x000711         0x59 build/default/production/mcc_generated_files/mcc.o
- .debug_abbrev    0x00076a         0x6f build/default/production/main.o
- .debug_abbrev    0x0007d9         0xde build/default/production/pepin024_lab4_SERVO_v001.o
- .debug_abbrev    0x0008b7         0xb4 build/default/production/_ext/736341408/pepin024_lab3_delay.o
- .debug_abbrev    0x00096b        0x12b build/default/production/pepin024_lab4_SONAR_v001.o
+ .debug_abbrev    0x000000        0x120 build/default/debug/mcc_generated_files/ic1.o
+ .debug_abbrev    0x000120        0x16e build/default/debug/mcc_generated_files/tmr2.o
+ .debug_abbrev    0x00028e        0x16e build/default/debug/mcc_generated_files/tmr3.o
+ .debug_abbrev    0x0003fc         0x5d build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_abbrev    0x000459        0x100 build/default/debug/mcc_generated_files/traps.o
+ .debug_abbrev    0x000559        0x184 build/default/debug/mcc_generated_files/oc1.o
+ .debug_abbrev    0x0006dd         0x34 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_abbrev    0x000711         0x59 build/default/debug/mcc_generated_files/mcc.o
+ .debug_abbrev    0x00076a         0x6f build/default/debug/main.o
+ .debug_abbrev    0x0007d9         0xde build/default/debug/pepin024_lab4_SERVO_v001.o
+ .debug_abbrev    0x0008b7         0xb4 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+ .debug_abbrev    0x00096b        0x12b build/default/debug/pepin024_lab4_SONAR_v001.o
 
 .debug_line       0x000000        0xa30
  *(.debug_line)
- .debug_line      0x000000        0x112 build/default/production/mcc_generated_files/ic1.o
- .debug_line      0x000112        0x127 build/default/production/mcc_generated_files/tmr2.o
- .debug_line      0x000239        0x127 build/default/production/mcc_generated_files/tmr3.o
- .debug_line      0x000360         0xb5 build/default/production/mcc_generated_files/pin_manager.o
- .debug_line      0x000415        0x11b build/default/production/mcc_generated_files/traps.o
- .debug_line      0x000530        0x134 build/default/production/mcc_generated_files/oc1.o
- .debug_line      0x000664         0x55 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_line      0x0006b9        0x107 build/default/production/mcc_generated_files/mcc.o
- .debug_line      0x0007c0         0x40 build/default/production/main.o
- .debug_line      0x000800         0xa9 build/default/production/pepin024_lab4_SERVO_v001.o
- .debug_line      0x0008a9         0xc1 build/default/production/_ext/736341408/pepin024_lab3_delay.o
- .debug_line      0x00096a         0xc6 build/default/production/pepin024_lab4_SONAR_v001.o
+ .debug_line      0x000000        0x112 build/default/debug/mcc_generated_files/ic1.o
+ .debug_line      0x000112        0x127 build/default/debug/mcc_generated_files/tmr2.o
+ .debug_line      0x000239        0x127 build/default/debug/mcc_generated_files/tmr3.o
+ .debug_line      0x000360         0xb5 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_line      0x000415        0x11b build/default/debug/mcc_generated_files/traps.o
+ .debug_line      0x000530        0x134 build/default/debug/mcc_generated_files/oc1.o
+ .debug_line      0x000664         0x55 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_line      0x0006b9        0x107 build/default/debug/mcc_generated_files/mcc.o
+ .debug_line      0x0007c0         0x40 build/default/debug/main.o
+ .debug_line      0x000800         0xa9 build/default/debug/pepin024_lab4_SERVO_v001.o
+ .debug_line      0x0008a9         0xc1 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+ .debug_line      0x00096a         0xc6 build/default/debug/pepin024_lab4_SONAR_v001.o
 
 .debug_frame      0x000000        0x744
  *(.debug_frame)
- .debug_frame     0x000000         0xd8 build/default/production/mcc_generated_files/ic1.o
- .debug_frame     0x0000d8        0x148 build/default/production/mcc_generated_files/tmr2.o
- .debug_frame     0x000220        0x148 build/default/production/mcc_generated_files/tmr3.o
- .debug_frame     0x000368         0x30 build/default/production/mcc_generated_files/pin_manager.o
- .debug_frame     0x000398         0x80 build/default/production/mcc_generated_files/traps.o
- .debug_frame     0x000418        0x164 build/default/production/mcc_generated_files/oc1.o
- .debug_frame     0x00057c         0x30 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_frame     0x0005ac         0x4c build/default/production/mcc_generated_files/mcc.o
- .debug_frame     0x0005f8         0x68 build/default/production/main.o
- .debug_frame     0x000660         0x4c build/default/production/pepin024_lab4_SERVO_v001.o
- .debug_frame     0x0006ac         0x4c build/default/production/_ext/736341408/pepin024_lab3_delay.o
- .debug_frame     0x0006f8         0x4c build/default/production/pepin024_lab4_SONAR_v001.o
+ .debug_frame     0x000000         0xd8 build/default/debug/mcc_generated_files/ic1.o
+ .debug_frame     0x0000d8        0x148 build/default/debug/mcc_generated_files/tmr2.o
+ .debug_frame     0x000220        0x148 build/default/debug/mcc_generated_files/tmr3.o
+ .debug_frame     0x000368         0x30 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_frame     0x000398         0x80 build/default/debug/mcc_generated_files/traps.o
+ .debug_frame     0x000418        0x164 build/default/debug/mcc_generated_files/oc1.o
+ .debug_frame     0x00057c         0x30 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_frame     0x0005ac         0x4c build/default/debug/mcc_generated_files/mcc.o
+ .debug_frame     0x0005f8         0x68 build/default/debug/main.o
+ .debug_frame     0x000660         0x4c build/default/debug/pepin024_lab4_SERVO_v001.o
+ .debug_frame     0x0006ac         0x4c build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+ .debug_frame     0x0006f8         0x4c build/default/debug/pepin024_lab4_SONAR_v001.o
 
 .debug_str        0x000000         0xce
  *(.debug_str)
- .debug_str       0x000000         0x14 build/default/production/mcc_generated_files/ic1.o
- .debug_str       0x000014         0x13 build/default/production/mcc_generated_files/tmr2.o
- .debug_str       0x000027         0x13 build/default/production/mcc_generated_files/tmr3.o
- .debug_str       0x00003a          0xc build/default/production/mcc_generated_files/traps.o
- .debug_str       0x000046         0x22 build/default/production/mcc_generated_files/oc1.o
- .debug_str       0x000068         0x15 build/default/production/pepin024_lab4_SERVO_v001.o
- .debug_str       0x00007d          0x9 build/default/production/_ext/736341408/pepin024_lab3_delay.o
- .debug_str       0x000086         0x48 build/default/production/pepin024_lab4_SONAR_v001.o
+ .debug_str       0x000000         0x14 build/default/debug/mcc_generated_files/ic1.o
+ .debug_str       0x000014         0x13 build/default/debug/mcc_generated_files/tmr2.o
+ .debug_str       0x000027         0x13 build/default/debug/mcc_generated_files/tmr3.o
+ .debug_str       0x00003a          0xc build/default/debug/mcc_generated_files/traps.o
+ .debug_str       0x000046         0x22 build/default/debug/mcc_generated_files/oc1.o
+ .debug_str       0x000068         0x15 build/default/debug/pepin024_lab4_SERVO_v001.o
+ .debug_str       0x00007d          0x9 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+ .debug_str       0x000086         0x48 build/default/debug/pepin024_lab4_SONAR_v001.o
 
 .debug_loc
  *(.debug_loc)
@@ -403,29 +444,29 @@ __CONFIG1
                   0x000000        0x5c2
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0xa6 build/default/production/mcc_generated_files/ic1.o
+                  0x000000         0xa6 build/default/debug/mcc_generated_files/ic1.o
  .debug_pubnames
-                  0x0000a6        0x11a build/default/production/mcc_generated_files/tmr2.o
+                  0x0000a6        0x11a build/default/debug/mcc_generated_files/tmr2.o
  .debug_pubnames
-                  0x0001c0        0x11a build/default/production/mcc_generated_files/tmr3.o
+                  0x0001c0        0x11a build/default/debug/mcc_generated_files/tmr3.o
  .debug_pubnames
-                  0x0002da         0x2d build/default/production/mcc_generated_files/pin_manager.o
+                  0x0002da         0x2d build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubnames
-                  0x000307         0x6f build/default/production/mcc_generated_files/traps.o
+                  0x000307         0x6f build/default/debug/mcc_generated_files/traps.o
  .debug_pubnames
-                  0x000376        0x12c build/default/production/mcc_generated_files/oc1.o
+                  0x000376        0x12c build/default/debug/mcc_generated_files/oc1.o
  .debug_pubnames
-                  0x0004a2         0x2b build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x0004a2         0x2b build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_pubnames
-                  0x0004cd         0x42 build/default/production/mcc_generated_files/mcc.o
+                  0x0004cd         0x42 build/default/debug/mcc_generated_files/mcc.o
  .debug_pubnames
-                  0x00050f         0x2e build/default/production/main.o
+                  0x00050f         0x2e build/default/debug/main.o
  .debug_pubnames
-                  0x00053d         0x2d build/default/production/pepin024_lab4_SERVO_v001.o
+                  0x00053d         0x2d build/default/debug/pepin024_lab4_SERVO_v001.o
  .debug_pubnames
-                  0x00056a         0x25 build/default/production/_ext/736341408/pepin024_lab3_delay.o
+                  0x00056a         0x25 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_pubnames
-                  0x00058f         0x33 build/default/production/pepin024_lab4_SONAR_v001.o
+                  0x00058f         0x33 build/default/debug/pepin024_lab4_SONAR_v001.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -433,29 +474,29 @@ __CONFIG1
 .debug_aranges    0x000000        0x120
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/mcc_generated_files/ic1.o
+                  0x000000         0x18 build/default/debug/mcc_generated_files/ic1.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/mcc_generated_files/tmr2.o
+                  0x000018         0x18 build/default/debug/mcc_generated_files/tmr2.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/mcc_generated_files/tmr3.o
+                  0x000030         0x18 build/default/debug/mcc_generated_files/tmr3.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000048         0x18 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x000060         0x18 build/default/debug/mcc_generated_files/traps.o
  .debug_aranges
-                  0x000078         0x18 build/default/production/mcc_generated_files/oc1.o
+                  0x000078         0x18 build/default/debug/mcc_generated_files/oc1.o
  .debug_aranges
-                  0x000090         0x18 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000090         0x18 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/production/mcc_generated_files/mcc.o
+                  0x0000a8         0x18 build/default/debug/mcc_generated_files/mcc.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/production/main.o
+                  0x0000c0         0x18 build/default/debug/main.o
  .debug_aranges
-                  0x0000d8         0x18 build/default/production/pepin024_lab4_SERVO_v001.o
+                  0x0000d8         0x18 build/default/debug/pepin024_lab4_SERVO_v001.o
  .debug_aranges
-                  0x0000f0         0x18 build/default/production/_ext/736341408/pepin024_lab3_delay.o
+                  0x0000f0         0x18 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_aranges
-                  0x000108         0x18 build/default/production/pepin024_lab4_SONAR_v001.o
+                  0x000108         0x18 build/default/debug/pepin024_lab4_SONAR_v001.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1037,111 +1078,111 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30
 LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-c-elf.a
 END GROUP
-OUTPUT(dist/default/production/pepin024_lab4_v001.X.production.elf elf32-pic30)
+OUTPUT(dist/default/debug/pepin024_lab4_v001.X.debug.elf elf32-pic30)
 LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
                   0x000120        0x3e9
  .debug_pubtypes
-                  0x000120         0x5d build/default/production/mcc_generated_files/ic1.o
+                  0x000120         0x5d build/default/debug/mcc_generated_files/ic1.o
  .debug_pubtypes
-                  0x00017d         0x87 build/default/production/mcc_generated_files/tmr2.o
+                  0x00017d         0x87 build/default/debug/mcc_generated_files/tmr2.o
  .debug_pubtypes
-                  0x000204         0x87 build/default/production/mcc_generated_files/tmr3.o
+                  0x000204         0x87 build/default/debug/mcc_generated_files/tmr3.o
  .debug_pubtypes
-                  0x00028b         0x12 build/default/production/mcc_generated_files/pin_manager.o
+                  0x00028b         0x12 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubtypes
-                  0x00029d         0x4e build/default/production/mcc_generated_files/traps.o
+                  0x00029d         0x4e build/default/debug/mcc_generated_files/traps.o
  .debug_pubtypes
-                  0x0002eb         0x6c build/default/production/mcc_generated_files/oc1.o
+                  0x0002eb         0x6c build/default/debug/mcc_generated_files/oc1.o
  .debug_pubtypes
-                  0x000357         0x12 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000357         0x12 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_pubtypes
-                  0x000369         0x1e build/default/production/mcc_generated_files/mcc.o
+                  0x000369         0x1e build/default/debug/mcc_generated_files/mcc.o
  .debug_pubtypes
-                  0x000387         0x12 build/default/production/main.o
+                  0x000387         0x12 build/default/debug/main.o
  .debug_pubtypes
-                  0x000399         0x52 build/default/production/pepin024_lab4_SERVO_v001.o
+                  0x000399         0x52 build/default/debug/pepin024_lab4_SERVO_v001.o
  .debug_pubtypes
-                  0x0003eb         0x2f build/default/production/_ext/736341408/pepin024_lab3_delay.o
+                  0x0003eb         0x2f build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_pubtypes
-                  0x00041a         0xef build/default/production/pepin024_lab4_SONAR_v001.o
+                  0x00041a         0xef build/default/debug/pepin024_lab4_SONAR_v001.o
 
 __c30_signature
                   0x000509         0x54
  __c30_signature
-                  0x000509          0x6 build/default/production/mcc_generated_files/ic1.o
+                  0x000509          0x6 build/default/debug/mcc_generated_files/ic1.o
  __c30_signature
-                  0x00050f          0x6 build/default/production/mcc_generated_files/tmr2.o
+                  0x00050f          0x6 build/default/debug/mcc_generated_files/tmr2.o
  __c30_signature
-                  0x000515          0x6 build/default/production/mcc_generated_files/tmr3.o
+                  0x000515          0x6 build/default/debug/mcc_generated_files/tmr3.o
  __c30_signature
-                  0x00051b          0x6 build/default/production/mcc_generated_files/pin_manager.o
+                  0x00051b          0x6 build/default/debug/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x000521          0x6 build/default/production/mcc_generated_files/traps.o
+                  0x000521          0x6 build/default/debug/mcc_generated_files/traps.o
  __c30_signature
-                  0x000527          0x6 build/default/production/mcc_generated_files/oc1.o
+                  0x000527          0x6 build/default/debug/mcc_generated_files/oc1.o
  __c30_signature
-                  0x00052d          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x00052d          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x000533          0x6 build/default/production/mcc_generated_files/mcc.o
+                  0x000533          0x6 build/default/debug/mcc_generated_files/mcc.o
  __c30_signature
-                  0x000539          0x6 build/default/production/main.o
+                  0x000539          0x6 build/default/debug/main.o
  __c30_signature
-                  0x00053f          0x6 build/default/production/pepin024_lab4_SERVO_v001.o
+                  0x00053f          0x6 build/default/debug/pepin024_lab4_SERVO_v001.o
  __c30_signature
-                  0x000545          0x6 build/default/production/_ext/736341408/pepin024_lab3_delay.o
+                  0x000545          0x6 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  __c30_signature
-                  0x00054b          0x6 build/default/production/pepin024_lab4_SONAR_v001.o
+                  0x00054b          0x6 build/default/debug/pepin024_lab4_SONAR_v001.o
  __c30_signature
                   0x000551          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
                   0x000557          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
 
-.nbss               0x0800          0x2
- .nbss              0x0800          0x2 build/default/production/mcc_generated_files/ic1.o
+.nbss               0x0850          0x2
+ .nbss              0x0850          0x2 build/default/debug/mcc_generated_files/ic1.o
 
-.ndata              0x0802          0x2
- .ndata             0x0802          0x2 build/default/production/mcc_generated_files/traps.o
+.ndata              0x0852          0x2
+ .ndata             0x0852          0x2 build/default/debug/mcc_generated_files/traps.o
 
-.nbss               0x0804          0x2
- .nbss              0x0804          0x2 build/default/production/mcc_generated_files/oc1.o
+.nbss               0x0854          0x2
+ .nbss              0x0854          0x2 build/default/debug/mcc_generated_files/oc1.o
 
-.bss                0x0806         0x24
- .bss               0x0806         0x20 build/default/production/mcc_generated_files/traps.o
- .bss               0x0826          0x2 build/default/production/mcc_generated_files/tmr2.o
- .bss               0x0828          0x2 build/default/production/mcc_generated_files/tmr3.o
+.bss                0x0856         0x24
+ .bss               0x0856         0x20 build/default/debug/mcc_generated_files/traps.o
+ .bss               0x0876          0x2 build/default/debug/mcc_generated_files/tmr2.o
+ .bss               0x0878          0x2 build/default/debug/mcc_generated_files/tmr3.o
 
 .ivt._OscillatorFail
                   0x000006          0x2
  .ivt._OscillatorFail
-                  0x000006          0x2 build/default/production/mcc_generated_files/traps.o
+                  0x000006          0x2 build/default/debug/mcc_generated_files/traps.o
 
 .ivt._StackError
                   0x00000a          0x2
  .ivt._StackError
-                  0x00000a          0x2 build/default/production/mcc_generated_files/traps.o
+                  0x00000a          0x2 build/default/debug/mcc_generated_files/traps.o
 
 .ivt._AddressError
                   0x000008          0x2
  .ivt._AddressError
-                  0x000008          0x2 build/default/production/mcc_generated_files/traps.o
+                  0x000008          0x2 build/default/debug/mcc_generated_files/traps.o
 
 .ivt._MathError
                   0x00000c          0x2
  .ivt._MathError
-                  0x00000c          0x2 build/default/production/mcc_generated_files/traps.o
+                  0x00000c          0x2 build/default/debug/mcc_generated_files/traps.o
 
 .config_JTAGEN    0x00abfe          0x2
  .config_JTAGEN
-                  0x00abfe          0x2 build/default/production/mcc_generated_files/mcc.o
+                  0x00abfe          0x2 build/default/debug/mcc_generated_files/mcc.o
 
 .config_IESO      0x00abfc          0x2
- .config_IESO     0x00abfc          0x2 build/default/production/mcc_generated_files/mcc.o
+ .config_IESO     0x00abfc          0x2 build/default/debug/mcc_generated_files/mcc.o
 
-.text             0x0002ce        0x400
- .text            0x0002ce         0xe8 build/default/production/mcc_generated_files/oc1.o
+.text             0x0002ce        0x402
+ .text            0x0002ce         0xe8 build/default/debug/mcc_generated_files/oc1.o
                   0x0002ce                  _OC1_Initialize
                   0x0002e6                  _OC1_Tasks
                   0x0002f6                  _OC1_Start
@@ -1154,7 +1195,7 @@ __c30_signature
                   0x00036c                  _OC1_PrimaryValueSet
                   0x000378                  _OC1_IsCompareCycleComplete
                   0x000390                  _OC1_FaultStatusGet
- .text            0x0003b6         0xb2 build/default/production/mcc_generated_files/tmr2.o
+ .text            0x0003b6         0xb2 build/default/debug/mcc_generated_files/tmr2.o
                   0x0003b6                  _TMR2_Initialize
                   0x0003cc                  _TMR2_Tasks_16BitOperation
                   0x0003ee                  _TMR2_Period16BitSet
@@ -1166,7 +1207,7 @@ __c30_signature
                   0x000438                  _TMR2_GetElapsedThenClear
                   0x000450                  _TMR2_SoftwareCounterGet
                   0x00045c                  _TMR2_SoftwareCounterClear
- .text            0x000468         0xb2 build/default/production/mcc_generated_files/tmr3.o
+ .text            0x000468         0xb2 build/default/debug/mcc_generated_files/tmr3.o
                   0x000468                  _TMR3_Initialize
                   0x00047e                  _TMR3_Tasks_16BitOperation
                   0x0004a0                  _TMR3_Period16BitSet
@@ -1178,10 +1219,10 @@ __c30_signature
                   0x0004ea                  _TMR3_GetElapsedThenClear
                   0x000502                  _TMR3_SoftwareCounterGet
                   0x00050e                  _TMR3_SoftwareCounterClear
- .text            0x00051a         0x94 build/default/production/pepin024_lab4_SONAR_v001.o
+ .text            0x00051a         0x94 build/default/debug/pepin024_lab4_SONAR_v001.o
                   0x00051a                  _initPing
                   0x00054e                  _measRangeFinder
- .text            0x0005ae         0x80 build/default/production/mcc_generated_files/ic1.o
+ .text            0x0005ae         0x80 build/default/debug/mcc_generated_files/ic1.o
                   0x0005ae                  _IC1_Initialize
                   0x0005c2                  _IC1_Tasks
                   0x0005d2                  _IC1_Start
@@ -1189,31 +1230,31 @@ __c30_signature
                   0x0005fa                  _IC1_CaptureDataRead
                   0x000602                  _IC1_HasCaptureBufferOverflowed
                   0x00061a                  _IC1_IsCaptureBufferEmpty
- .text            0x00062e         0x3a build/default/production/_ext/736341408/pepin024_lab3_delay.o
-                  0x00062e                  _mSec
-                  0x00064a                  _delay
- .text            0x000668         0x38 build/default/production/mcc_generated_files/traps.o
-                  0x000668                  _TRAPS_halt_on_error
-                  0x00067e                  __OscillatorFail
-                  0x000686                  __StackError
-                  0x000690                  __AddressError
-                  0x000698                  __MathError
- .text            0x0006a0         0x2e build/default/production/mcc_generated_files/mcc.o
-                  0x0006a0                  _SYSTEM_Initialize
-                  0x0006b4                  _OSCILLATOR_Initialize
+ .text            0x00062e         0x3a build/default/debug/mcc_generated_files/traps.o
+                  0x00062e                  _TRAPS_halt_on_error
+                  0x000646                  __OscillatorFail
+                  0x00064e                  __StackError
+                  0x000658                  __AddressError
+                  0x000660                  __MathError
+ .text            0x000668         0x3a build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+                  0x000668                  _mSec
+                  0x000684                  _delay
+ .text            0x0006a2         0x2e build/default/debug/mcc_generated_files/mcc.o
+                  0x0006a2                  _SYSTEM_Initialize
+                  0x0006b6                  _OSCILLATOR_Initialize
 
-.dinit            0x0006ce         0x28
- .dinit           0x0006ce         0x28 data_init
+.dinit            0x0006d0         0x28
+ .dinit           0x0006d0         0x28 data_init
 
-.text             0x0006f6         0x66
- .text            0x0006f6         0x22 build/default/production/main.o
-                  0x0006f6                  _main
-                  0x000700                  _setup
-                  0x00070a                  _loop
- .text            0x000718         0x20 build/default/production/pepin024_lab4_SERVO_v001.o
-                  0x000718                  _initServo
-                  0x00072c                  _setServo
- .text            0x000738         0x1e build/default/production/mcc_generated_files/pin_manager.o
-                  0x000738                  _PIN_MANAGER_Initialize
- .text            0x000756          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x000756                  _INTERRUPT_Initialize
+.text             0x0006f8         0x66
+ .text            0x0006f8         0x22 build/default/debug/main.o
+                  0x0006f8                  _main
+                  0x000702                  _setup
+                  0x00070c                  _loop
+ .text            0x00071a         0x20 build/default/debug/pepin024_lab4_SERVO_v001.o
+                  0x00071a                  _initServo
+                  0x00072e                  _setServo
+ .text            0x00073a         0x1e build/default/debug/mcc_generated_files/pin_manager.o
+                  0x00073a                  _PIN_MANAGER_Initialize
+ .text            0x000758          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x000758                  _INTERRUPT_Initialize

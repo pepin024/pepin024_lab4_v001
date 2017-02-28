@@ -41,7 +41,7 @@ unsigned int measRangeFinder(void){
     _ICM = 0x001;
     
     _RB8 = 1;
-    T1CON = 0x8001;
+    T1CON = 0x8000;
     
     while(!_T1IF);
     _RB8 = 0;

@@ -27,16 +27,13 @@ Command:
   build/default/debug/pepin024_lab4_SERVO_v001.o \
   build/default/debug/_ext/736341408/pepin024_lab3_delay.o \
   build/default/debug/pepin024_lab4_SONAR_v001.o \
-  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00002720.00 \
-  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00002720.01 \
-  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00002720.02 \
-  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00002720.03 \
-  -TC:\\Users\\pepin\\AppData\\Local\\Temp\\tmp00002720.04 \
+  build/default/debug/pepin024_lab4_LED_v001.o \
+  build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o \
   --defsym=__MPLAB_BUILD=1 \
   --defsym=__MPLAB_DEBUG=1 \
   --defsym=__DEBUG=1 \
-  --defsym=__MPLAB_DEBUGGER_PK3=1 \
-  -Tp24FJ64GA002.gld.05 \
+  --defsym=__MPLAB_DEBUGGER_SIMULATOR=1 \
+  -Tp24FJ64GA002.gld.00 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -93,11 +90,11 @@ Program Memory  [Origin = 0x200, Length = 0xa9fc]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x290           0x3d8  (984)
-.text                        0x490               0x412           0x61b  (1563)
-.dinit                       0x8a2                0x28            0x3c  (60)
-.text                        0x8ca                0x66            0x99  (153)
+.text                        0x490               0x5f4           0x8ee  (2286)
+.dinit                       0xa84                0x28            0x3c  (60)
+.text                        0xaac                0x68            0x9c  (156)
 
-                 Total program memory used (bytes):          0xac8  (2760) 4%
+                 Total program memory used (bytes):          0xd9e  (3486) 5%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0xfc]
@@ -114,17 +111,12 @@ Data Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-reserve_data_0x800           0x800                0x20            0x20  (32)
-reserve_data_0x820           0x820                 0x2             0x2  (2)
-reserve_data_0x822           0x822                 0x2             0x2  (2)
-reserve_data_0x824           0x824                 0x2             0x2  (2)
-reserve_data_0x826           0x826                0x2a            0x2a  (42)
-.nbss                        0x850                   0             0x2  (2)
-.ndata                       0x852                   0             0x2  (2)
-.nbss                        0x854                   0             0x2  (2)
-.bss                         0x856                   0            0x24  (36)
+.nbss                        0x800                   0             0x2  (2)
+.ndata                       0x802                   0             0x2  (2)
+.nbss                        0x804                   0             0x2  (2)
+.bss                         0x806                   0            0x24  (36)
 
-                 Total data memory used (bytes):           0x7a  (122) 1%
+                 Total data memory used (bytes):           0x2a  (42) <1%
 
 
 Dynamic Memory Usage
@@ -132,9 +124,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x87a                              0x1f86  (8070)
+stack                        0x82a                              0x1fd6  (8150)
 
-                 Maximum dynamic memory (bytes):         0x1f86  (8070)
+                 Maximum dynamic memory (bytes):         0x1fd6  (8150)
 
 
 External Symbols in Program Memory (by address):
@@ -154,117 +146,130 @@ External Symbols in Program Memory (by address):
                   0x000424                  __fbopExit
                   0x00042c                  __fbopReturnNaN
                   0x000432                  ___floatundisf
-                  0x000490                  _OC1_Initialize
-                  0x0004a8                  _OC1_Tasks
-                  0x0004b8                  _OC1_Start
-                  0x0004d2                  _OC1_Stop
-                  0x0004e0                  _OC1_SingleCompareValueSet
-                  0x0004ec                  _OC1_DualCompareValueSet
-                  0x0004fe                  _OC1_CentreAlignedPWMConfig
-                  0x000510                  _OC1_EdgeAlignedPWMConfig
-                  0x000522                  _OC1_SecondaryValueSet
-                  0x00052e                  _OC1_PrimaryValueSet
-                  0x00053a                  _OC1_IsCompareCycleComplete
-                  0x000552                  _OC1_FaultStatusGet
-                  0x000578                  _TMR2_Initialize
-                  0x00058e                  _TMR2_Tasks_16BitOperation
-                  0x0005b0                  _TMR2_Period16BitSet
-                  0x0005c2                  _TMR2_Period16BitGet
-                  0x0005ca                  _TMR2_Counter16BitSet
-                  0x0005dc                  _TMR2_Counter16BitGet
-                  0x0005e4                  _TMR2_Start
-                  0x0005f2                  _TMR2_Stop
-                  0x0005fa                  _TMR2_GetElapsedThenClear
-                  0x000612                  _TMR2_SoftwareCounterGet
-                  0x00061e                  _TMR2_SoftwareCounterClear
-                  0x00062a                  _TMR3_Initialize
-                  0x000640                  _TMR3_Tasks_16BitOperation
-                  0x000662                  _TMR3_Period16BitSet
-                  0x000674                  _TMR3_Period16BitGet
-                  0x00067c                  _TMR3_Counter16BitSet
-                  0x00068e                  _TMR3_Counter16BitGet
-                  0x000696                  _TMR3_Start
-                  0x0006a4                  _TMR3_Stop
-                  0x0006ac                  _TMR3_GetElapsedThenClear
-                  0x0006c4                  _TMR3_SoftwareCounterGet
-                  0x0006d0                  _TMR3_SoftwareCounterClear
-                  0x0006dc                  _initPing
-                  0x000710                  _measRangeFinder
-                  0x000780                  _IC1_Initialize
-                  0x000794                  _IC1_Tasks
-                  0x0007a4                  _IC1_Start
-                  0x0007be                  _IC1_Stop
-                  0x0007cc                  _IC1_CaptureDataRead
-                  0x0007d4                  _IC1_HasCaptureBufferOverflowed
-                  0x0007ec                  _IC1_IsCaptureBufferEmpty
-                  0x000818                  __OscillatorFail
-                  0x000820                  __StackError
-                  0x00082a                  __AddressError
-                  0x000832                  __MathError
-                  0x00083a                  _mSec
-                  0x000856                  _delay
-                  0x000874                  _SYSTEM_Initialize
-                  0x000888                  _OSCILLATOR_Initialize
-                  0x0008ca                  _main
-                  0x0008d4                  _setup
-                  0x0008de                  _loop
-                  0x0008ec                  _initServo
-                  0x000900                  _setServo
-                  0x00090c                  _PIN_MANAGER_Initialize
-                  0x00092a                  _INTERRUPT_Initialize
+                  0x000490                  _initLED
+                  0x000498                  _writeColor
+                  0x000512                  _drawFrame
+                  0x000526                  _packColor
+                  0x000556                  _getR
+                  0x000564                  _getG
+                  0x000578                  _getB
+                  0x000584                  _writePacCol
+                  0x0005a8                  _Wheel
+                  0x00061a                  _OC1_Initialize
+                  0x000632                  _OC1_Tasks
+                  0x000642                  _OC1_Start
+                  0x00065c                  _OC1_Stop
+                  0x00066a                  _OC1_SingleCompareValueSet
+                  0x000676                  _OC1_DualCompareValueSet
+                  0x000688                  _OC1_CentreAlignedPWMConfig
+                  0x00069a                  _OC1_EdgeAlignedPWMConfig
+                  0x0006ac                  _OC1_SecondaryValueSet
+                  0x0006b8                  _OC1_PrimaryValueSet
+                  0x0006c4                  _OC1_IsCompareCycleComplete
+                  0x0006dc                  _OC1_FaultStatusGet
+                  0x000702                  _TMR2_Initialize
+                  0x000718                  _TMR2_Tasks_16BitOperation
+                  0x00073a                  _TMR2_Period16BitSet
+                  0x00074c                  _TMR2_Period16BitGet
+                  0x000754                  _TMR2_Counter16BitSet
+                  0x000766                  _TMR2_Counter16BitGet
+                  0x00076e                  _TMR2_Start
+                  0x00077c                  _TMR2_Stop
+                  0x000784                  _TMR2_GetElapsedThenClear
+                  0x00079c                  _TMR2_SoftwareCounterGet
+                  0x0007a8                  _TMR2_SoftwareCounterClear
+                  0x0007b4                  _TMR3_Initialize
+                  0x0007ca                  _TMR3_Tasks_16BitOperation
+                  0x0007ec                  _TMR3_Period16BitSet
+                  0x0007fe                  _TMR3_Period16BitGet
+                  0x000806                  _TMR3_Counter16BitSet
+                  0x000818                  _TMR3_Counter16BitGet
+                  0x000820                  _TMR3_Start
+                  0x00082e                  _TMR3_Stop
+                  0x000836                  _TMR3_GetElapsedThenClear
+                  0x00084e                  _TMR3_SoftwareCounterGet
+                  0x00085a                  _TMR3_SoftwareCounterClear
+                  0x000866                  _initPing
+                  0x00089a                  _measRangeFinder
+                  0x00090a                  _IC1_Initialize
+                  0x00091e                  _IC1_Tasks
+                  0x00092e                  _IC1_Start
+                  0x000948                  _IC1_Stop
+                  0x000956                  _IC1_CaptureDataRead
+                  0x00095e                  _IC1_HasCaptureBufferOverflowed
+                  0x000976                  _IC1_IsCaptureBufferEmpty
+                  0x00098a                  _main
+                  0x000994                  _setup
+                  0x0009d4                  _loop
+                  0x0009fa                  __OscillatorFail
+                  0x000a02                  __StackError
+                  0x000a0c                  __AddressError
+                  0x000a14                  __MathError
+                  0x000a1c                  _mSec
+                  0x000a38                  _delay
+                  0x000a56                  _SYSTEM_Initialize
+                  0x000a6a                  _OSCILLATOR_Initialize
+                  0x000aac                  _writeHighBit
+                  0x000abc                  _writeLowBit
+                  0x000aca                  _wait_50_us
+                  0x000ad0                  _initServo
+                  0x000ae4                  _setServo
+                  0x000af0                  _PIN_MANAGER_Initialize
+                  0x000b0e                  _INTERRUPT_Initialize
 
 External Symbols in Program Memory (by name):
 
-                  0x0007cc                  _IC1_CaptureDataRead
-                  0x0007d4                  _IC1_HasCaptureBufferOverflowed
-                  0x000780                  _IC1_Initialize
-                  0x0007ec                  _IC1_IsCaptureBufferEmpty
-                  0x0007a4                  _IC1_Start
-                  0x0007be                  _IC1_Stop
-                  0x000794                  _IC1_Tasks
-                  0x00092a                  _INTERRUPT_Initialize
-                  0x0004fe                  _OC1_CentreAlignedPWMConfig
-                  0x0004ec                  _OC1_DualCompareValueSet
-                  0x000510                  _OC1_EdgeAlignedPWMConfig
-                  0x000552                  _OC1_FaultStatusGet
-                  0x000490                  _OC1_Initialize
-                  0x00053a                  _OC1_IsCompareCycleComplete
-                  0x00052e                  _OC1_PrimaryValueSet
-                  0x000522                  _OC1_SecondaryValueSet
-                  0x0004e0                  _OC1_SingleCompareValueSet
-                  0x0004b8                  _OC1_Start
-                  0x0004d2                  _OC1_Stop
-                  0x0004a8                  _OC1_Tasks
-                  0x000888                  _OSCILLATOR_Initialize
-                  0x00090c                  _PIN_MANAGER_Initialize
-                  0x000874                  _SYSTEM_Initialize
-                  0x0005dc                  _TMR2_Counter16BitGet
-                  0x0005ca                  _TMR2_Counter16BitSet
-                  0x0005fa                  _TMR2_GetElapsedThenClear
-                  0x000578                  _TMR2_Initialize
-                  0x0005c2                  _TMR2_Period16BitGet
-                  0x0005b0                  _TMR2_Period16BitSet
-                  0x00061e                  _TMR2_SoftwareCounterClear
-                  0x000612                  _TMR2_SoftwareCounterGet
-                  0x0005e4                  _TMR2_Start
-                  0x0005f2                  _TMR2_Stop
-                  0x00058e                  _TMR2_Tasks_16BitOperation
-                  0x00068e                  _TMR3_Counter16BitGet
-                  0x00067c                  _TMR3_Counter16BitSet
-                  0x0006ac                  _TMR3_GetElapsedThenClear
-                  0x00062a                  _TMR3_Initialize
-                  0x000674                  _TMR3_Period16BitGet
-                  0x000662                  _TMR3_Period16BitSet
-                  0x0006d0                  _TMR3_SoftwareCounterClear
-                  0x0006c4                  _TMR3_SoftwareCounterGet
-                  0x000696                  _TMR3_Start
-                  0x0006a4                  _TMR3_Stop
-                  0x000640                  _TMR3_Tasks_16BitOperation
-                  0x00082a                  __AddressError
+                  0x000956                  _IC1_CaptureDataRead
+                  0x00095e                  _IC1_HasCaptureBufferOverflowed
+                  0x00090a                  _IC1_Initialize
+                  0x000976                  _IC1_IsCaptureBufferEmpty
+                  0x00092e                  _IC1_Start
+                  0x000948                  _IC1_Stop
+                  0x00091e                  _IC1_Tasks
+                  0x000b0e                  _INTERRUPT_Initialize
+                  0x000688                  _OC1_CentreAlignedPWMConfig
+                  0x000676                  _OC1_DualCompareValueSet
+                  0x00069a                  _OC1_EdgeAlignedPWMConfig
+                  0x0006dc                  _OC1_FaultStatusGet
+                  0x00061a                  _OC1_Initialize
+                  0x0006c4                  _OC1_IsCompareCycleComplete
+                  0x0006b8                  _OC1_PrimaryValueSet
+                  0x0006ac                  _OC1_SecondaryValueSet
+                  0x00066a                  _OC1_SingleCompareValueSet
+                  0x000642                  _OC1_Start
+                  0x00065c                  _OC1_Stop
+                  0x000632                  _OC1_Tasks
+                  0x000a6a                  _OSCILLATOR_Initialize
+                  0x000af0                  _PIN_MANAGER_Initialize
+                  0x000a56                  _SYSTEM_Initialize
+                  0x000766                  _TMR2_Counter16BitGet
+                  0x000754                  _TMR2_Counter16BitSet
+                  0x000784                  _TMR2_GetElapsedThenClear
+                  0x000702                  _TMR2_Initialize
+                  0x00074c                  _TMR2_Period16BitGet
+                  0x00073a                  _TMR2_Period16BitSet
+                  0x0007a8                  _TMR2_SoftwareCounterClear
+                  0x00079c                  _TMR2_SoftwareCounterGet
+                  0x00076e                  _TMR2_Start
+                  0x00077c                  _TMR2_Stop
+                  0x000718                  _TMR2_Tasks_16BitOperation
+                  0x000818                  _TMR3_Counter16BitGet
+                  0x000806                  _TMR3_Counter16BitSet
+                  0x000836                  _TMR3_GetElapsedThenClear
+                  0x0007b4                  _TMR3_Initialize
+                  0x0007fe                  _TMR3_Period16BitGet
+                  0x0007ec                  _TMR3_Period16BitSet
+                  0x00085a                  _TMR3_SoftwareCounterClear
+                  0x00084e                  _TMR3_SoftwareCounterGet
+                  0x000820                  _TMR3_Start
+                  0x00082e                  _TMR3_Stop
+                  0x0007ca                  _TMR3_Tasks_16BitOperation
+                  0x0005a8                  _Wheel
+                  0x000a0c                  __AddressError
                   0x0002c8                  __DefaultInterrupt
-                  0x000832                  __MathError
-                  0x000818                  __OscillatorFail
-                  0x000820                  __StackError
+                  0x000a14                  __MathError
+                  0x0009fa                  __OscillatorFail
+                  0x000a02                  __StackError
                   0x0002ce                  ___divsf3
                   0x000352                  ___fixunssfsi
                   0x000432                  ___floatundisf
@@ -279,15 +284,26 @@ External Symbols in Program Memory (by name):
                   0x000402                  __funpack2
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x000856                  _delay
-                  0x0006dc                  _initPing
-                  0x0008ec                  _initServo
-                  0x0008de                  _loop
-                  0x00083a                  _mSec
-                  0x0008ca                  _main
-                  0x000710                  _measRangeFinder
-                  0x000900                  _setServo
-                  0x0008d4                  _setup
+                  0x000a38                  _delay
+                  0x000512                  _drawFrame
+                  0x000578                  _getB
+                  0x000564                  _getG
+                  0x000556                  _getR
+                  0x000490                  _initLED
+                  0x000866                  _initPing
+                  0x000ad0                  _initServo
+                  0x0009d4                  _loop
+                  0x000a1c                  _mSec
+                  0x00098a                  _main
+                  0x00089a                  _measRangeFinder
+                  0x000526                  _packColor
+                  0x000ae4                  _setServo
+                  0x000994                  _setup
+                  0x000aca                  _wait_50_us
+                  0x000498                  _writeColor
+                  0x000aac                  _writeHighBit
+                  0x000abc                  _writeLowBit
+                  0x000584                  _writePacCol
 
 Memory Configuration
 
@@ -316,35 +332,12 @@ LOAD build/default/debug/main.o
 LOAD build/default/debug/pepin024_lab4_SERVO_v001.o
 LOAD build/default/debug/_ext/736341408/pepin024_lab3_delay.o
 LOAD build/default/debug/pepin024_lab4_SONAR_v001.o
-
-reserve_data_0x800
-                    0x0800         0x20
-                    0x0820                  . = 0x20
- *fill*             0x0800         0x2000
-
-reserve_data_0x820
-                    0x0820          0x2
-                    0x0822                  . = 0x2
- *fill*             0x0820          0x200
-
-reserve_data_0x822
-                    0x0822          0x2
-                    0x0824                  . = 0x2
- *fill*             0x0822          0x200
-
-reserve_data_0x824
-                    0x0824          0x2
-                    0x0826                  . = 0x2
- *fill*             0x0824          0x200
-
-reserve_data_0x826
-                    0x0826         0x2a
-                    0x0850                  . = 0x2a
- *fill*             0x0826         0x2a00
+LOAD build/default/debug/pepin024_lab4_LED_v001.o
+LOAD build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
                     0x0001                  __MPLAB_BUILD = 0x1
                     0x0001                  __MPLAB_DEBUG = 0x1
                     0x0001                  __DEBUG = 0x1
-                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_SIMULATOR = 0x1
 LOAD pPIC24Fxxx
 LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                     0xabfc                  __CONFIG2 = 0xabfc
@@ -425,7 +418,7 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3476
+.debug_info       0x000000       0x38d9
  *(.debug_info)
  .debug_info      0x000000        0x51b build/default/debug/mcc_generated_files/ic1.o
  .debug_info      0x00051b        0x63b build/default/debug/mcc_generated_files/tmr2.o
@@ -439,9 +432,11 @@ __CONFIG1
  .debug_info      0x0021d5        0x422 build/default/debug/pepin024_lab4_SERVO_v001.o
  .debug_info      0x0025f7        0x2a1 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_info      0x002898        0xbde build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_info      0x003476         0x99 build/default/debug/pepin024_lab4_LED_v001.o
+ .debug_info      0x00350f        0x3ca build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0xa96
+.debug_abbrev     0x000000        0xb8f
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x120 build/default/debug/mcc_generated_files/ic1.o
  .debug_abbrev    0x000120        0x16e build/default/debug/mcc_generated_files/tmr2.o
@@ -455,8 +450,10 @@ __CONFIG1
  .debug_abbrev    0x0007d9         0xde build/default/debug/pepin024_lab4_SERVO_v001.o
  .debug_abbrev    0x0008b7         0xb4 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_abbrev    0x00096b        0x12b build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_abbrev    0x000a96         0x14 build/default/debug/pepin024_lab4_LED_v001.o
+ .debug_abbrev    0x000aaa         0xe5 build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
 
-.debug_line       0x000000        0xa31
+.debug_line       0x000000        0xbe7
  *(.debug_line)
  .debug_line      0x000000        0x112 build/default/debug/mcc_generated_files/ic1.o
  .debug_line      0x000112        0x127 build/default/debug/mcc_generated_files/tmr2.o
@@ -466,12 +463,14 @@ __CONFIG1
  .debug_line      0x000530        0x134 build/default/debug/mcc_generated_files/oc1.o
  .debug_line      0x000664         0x55 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_line      0x0006b9        0x107 build/default/debug/mcc_generated_files/mcc.o
- .debug_line      0x0007c0         0x40 build/default/debug/main.o
- .debug_line      0x000800         0xa9 build/default/debug/pepin024_lab4_SERVO_v001.o
- .debug_line      0x0008a9         0xc1 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
- .debug_line      0x00096a         0xc7 build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_line      0x0007c0         0x5b build/default/debug/main.o
+ .debug_line      0x00081b         0xa9 build/default/debug/pepin024_lab4_SERVO_v001.o
+ .debug_line      0x0008c4         0xc1 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+ .debug_line      0x000985         0xc7 build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_line      0x000a4c         0x56 build/default/debug/pepin024_lab4_LED_v001.o
+ .debug_line      0x000aa2        0x145 build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
 
-.debug_frame      0x000000        0x744
+.debug_frame      0x000000        0x85a
  *(.debug_frame)
  .debug_frame     0x000000         0xd8 build/default/debug/mcc_generated_files/ic1.o
  .debug_frame     0x0000d8        0x148 build/default/debug/mcc_generated_files/tmr2.o
@@ -485,8 +484,9 @@ __CONFIG1
  .debug_frame     0x000660         0x4c build/default/debug/pepin024_lab4_SERVO_v001.o
  .debug_frame     0x0006ac         0x4c build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_frame     0x0006f8         0x4c build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_frame     0x000744        0x116 build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
 
-.debug_str        0x000000         0xce
+.debug_str        0x000000         0xe4
  *(.debug_str)
  .debug_str       0x000000         0x14 build/default/debug/mcc_generated_files/ic1.o
  .debug_str       0x000014         0x13 build/default/debug/mcc_generated_files/tmr2.o
@@ -496,6 +496,7 @@ __CONFIG1
  .debug_str       0x000068         0x15 build/default/debug/pepin024_lab4_SERVO_v001.o
  .debug_str       0x00007d          0x9 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_str       0x000086         0x48 build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_str       0x0000ce         0x16 build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
 
 .debug_loc
  *(.debug_loc)
@@ -504,7 +505,7 @@ __CONFIG1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x5c2
+                  0x000000        0x640
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0xa6 build/default/debug/mcc_generated_files/ic1.o
@@ -530,11 +531,13 @@ __CONFIG1
                   0x00056a         0x25 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_pubnames
                   0x00058f         0x33 build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_pubnames
+                  0x0005c2         0x7e build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
 
 .debug_ranges
  *(.debug_ranges)
 
-.debug_aranges    0x000000        0x120
+.debug_aranges    0x000000        0x150
  *(.debug_aranges)
  .debug_aranges
                   0x000000         0x18 build/default/debug/mcc_generated_files/ic1.o
@@ -560,6 +563,10 @@ __CONFIG1
                   0x0000f0         0x18 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_aranges
                   0x000108         0x18 build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_aranges
+                  0x000120         0x18 build/default/debug/pepin024_lab4_LED_v001.o
+ .debug_aranges
+                  0x000138         0x18 build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1146,92 +1153,96 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000120        0x3e9
+                  0x000150        0x427
  .debug_pubtypes
-                  0x000120         0x5d build/default/debug/mcc_generated_files/ic1.o
+                  0x000150         0x5d build/default/debug/mcc_generated_files/ic1.o
  .debug_pubtypes
-                  0x00017d         0x87 build/default/debug/mcc_generated_files/tmr2.o
+                  0x0001ad         0x87 build/default/debug/mcc_generated_files/tmr2.o
  .debug_pubtypes
-                  0x000204         0x87 build/default/debug/mcc_generated_files/tmr3.o
+                  0x000234         0x87 build/default/debug/mcc_generated_files/tmr3.o
  .debug_pubtypes
-                  0x00028b         0x12 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x0002bb         0x12 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubtypes
-                  0x00029d         0x4e build/default/debug/mcc_generated_files/traps.o
+                  0x0002cd         0x4e build/default/debug/mcc_generated_files/traps.o
  .debug_pubtypes
-                  0x0002eb         0x6c build/default/debug/mcc_generated_files/oc1.o
+                  0x00031b         0x6c build/default/debug/mcc_generated_files/oc1.o
  .debug_pubtypes
-                  0x000357         0x12 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x000387         0x12 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_pubtypes
-                  0x000369         0x1e build/default/debug/mcc_generated_files/mcc.o
+                  0x000399         0x1e build/default/debug/mcc_generated_files/mcc.o
  .debug_pubtypes
-                  0x000387         0x12 build/default/debug/main.o
+                  0x0003b7         0x12 build/default/debug/main.o
  .debug_pubtypes
-                  0x000399         0x52 build/default/debug/pepin024_lab4_SERVO_v001.o
+                  0x0003c9         0x52 build/default/debug/pepin024_lab4_SERVO_v001.o
  .debug_pubtypes
-                  0x0003eb         0x2f build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+                  0x00041b         0x2f build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  .debug_pubtypes
-                  0x00041a         0xef build/default/debug/pepin024_lab4_SONAR_v001.o
+                  0x00044a         0xef build/default/debug/pepin024_lab4_SONAR_v001.o
+ .debug_pubtypes
+                  0x000539         0x3e build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
 
 __c30_signature
-                  0x000509         0x84
+                  0x000577         0x8a
  __c30_signature
-                  0x000509          0x6 build/default/debug/mcc_generated_files/ic1.o
+                  0x000577          0x6 build/default/debug/mcc_generated_files/ic1.o
  __c30_signature
-                  0x00050f          0x6 build/default/debug/mcc_generated_files/tmr2.o
+                  0x00057d          0x6 build/default/debug/mcc_generated_files/tmr2.o
  __c30_signature
-                  0x000515          0x6 build/default/debug/mcc_generated_files/tmr3.o
+                  0x000583          0x6 build/default/debug/mcc_generated_files/tmr3.o
  __c30_signature
-                  0x00051b          0x6 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x000589          0x6 build/default/debug/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x000521          0x6 build/default/debug/mcc_generated_files/traps.o
+                  0x00058f          0x6 build/default/debug/mcc_generated_files/traps.o
  __c30_signature
-                  0x000527          0x6 build/default/debug/mcc_generated_files/oc1.o
+                  0x000595          0x6 build/default/debug/mcc_generated_files/oc1.o
  __c30_signature
-                  0x00052d          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x00059b          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x000533          0x6 build/default/debug/mcc_generated_files/mcc.o
+                  0x0005a1          0x6 build/default/debug/mcc_generated_files/mcc.o
  __c30_signature
-                  0x000539          0x6 build/default/debug/main.o
+                  0x0005a7          0x6 build/default/debug/main.o
  __c30_signature
-                  0x00053f          0x6 build/default/debug/pepin024_lab4_SERVO_v001.o
+                  0x0005ad          0x6 build/default/debug/pepin024_lab4_SERVO_v001.o
  __c30_signature
-                  0x000545          0x6 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+                  0x0005b3          0x6 build/default/debug/_ext/736341408/pepin024_lab3_delay.o
  __c30_signature
-                  0x00054b          0x6 build/default/debug/pepin024_lab4_SONAR_v001.o
+                  0x0005b9          0x6 build/default/debug/pepin024_lab4_SONAR_v001.o
  __c30_signature
-                  0x000551          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x0005bf          0x6 build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
  __c30_signature
-                  0x000557          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x0005c5          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x00055d          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(divsf3.eo)
+                  0x0005cb          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x000563          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
+                  0x0005d1          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(divsf3.eo)
  __c30_signature
-                  0x000569          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
+                  0x0005d7          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
  __c30_signature
-                  0x00056f          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(fpack.eo)
+                  0x0005dd          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
  __c30_signature
-                  0x000575          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(funpack.eo)
+                  0x0005e3          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(fpack.eo)
  __c30_signature
-                  0x00057b          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(funpack2.eo)
+                  0x0005e9          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(funpack.eo)
  __c30_signature
-                  0x000581          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x0005ef          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(funpack2.eo)
  __c30_signature
-                  0x000587          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
+                  0x0005f5          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(futil.eo)
+ __c30_signature
+                  0x0005fb          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
 
-.nbss               0x0850          0x2
- .nbss              0x0850          0x2 build/default/debug/mcc_generated_files/ic1.o
+.nbss               0x0800          0x2
+ .nbss              0x0800          0x2 build/default/debug/mcc_generated_files/ic1.o
 
-.ndata              0x0852          0x2
- .ndata             0x0852          0x2 build/default/debug/mcc_generated_files/traps.o
+.ndata              0x0802          0x2
+ .ndata             0x0802          0x2 build/default/debug/mcc_generated_files/traps.o
 
-.nbss               0x0854          0x2
- .nbss              0x0854          0x2 build/default/debug/mcc_generated_files/oc1.o
+.nbss               0x0804          0x2
+ .nbss              0x0804          0x2 build/default/debug/mcc_generated_files/oc1.o
 
-.bss                0x0856         0x24
- .bss               0x0856         0x20 build/default/debug/mcc_generated_files/traps.o
- .bss               0x0876          0x2 build/default/debug/mcc_generated_files/tmr2.o
- .bss               0x0878          0x2 build/default/debug/mcc_generated_files/tmr3.o
+.bss                0x0806         0x24
+ .bss               0x0806         0x20 build/default/debug/mcc_generated_files/traps.o
+ .bss               0x0826          0x2 build/default/debug/mcc_generated_files/tmr2.o
+ .bss               0x0828          0x2 build/default/debug/mcc_generated_files/tmr3.o
 
 .ivt._OscillatorFail
                   0x000006          0x2
@@ -1260,80 +1271,94 @@ __c30_signature
 .config_IESO      0x00abfc          0x2
  .config_IESO     0x00abfc          0x2 build/default/debug/mcc_generated_files/mcc.o
 
-.text             0x000490        0x412
- .text            0x000490         0xe8 build/default/debug/mcc_generated_files/oc1.o
-                  0x000490                  _OC1_Initialize
-                  0x0004a8                  _OC1_Tasks
-                  0x0004b8                  _OC1_Start
-                  0x0004d2                  _OC1_Stop
-                  0x0004e0                  _OC1_SingleCompareValueSet
-                  0x0004ec                  _OC1_DualCompareValueSet
-                  0x0004fe                  _OC1_CentreAlignedPWMConfig
-                  0x000510                  _OC1_EdgeAlignedPWMConfig
-                  0x000522                  _OC1_SecondaryValueSet
-                  0x00052e                  _OC1_PrimaryValueSet
-                  0x00053a                  _OC1_IsCompareCycleComplete
-                  0x000552                  _OC1_FaultStatusGet
- .text            0x000578         0xb2 build/default/debug/mcc_generated_files/tmr2.o
-                  0x000578                  _TMR2_Initialize
-                  0x00058e                  _TMR2_Tasks_16BitOperation
-                  0x0005b0                  _TMR2_Period16BitSet
-                  0x0005c2                  _TMR2_Period16BitGet
-                  0x0005ca                  _TMR2_Counter16BitSet
-                  0x0005dc                  _TMR2_Counter16BitGet
-                  0x0005e4                  _TMR2_Start
-                  0x0005f2                  _TMR2_Stop
-                  0x0005fa                  _TMR2_GetElapsedThenClear
-                  0x000612                  _TMR2_SoftwareCounterGet
-                  0x00061e                  _TMR2_SoftwareCounterClear
- .text            0x00062a         0xb2 build/default/debug/mcc_generated_files/tmr3.o
-                  0x00062a                  _TMR3_Initialize
-                  0x000640                  _TMR3_Tasks_16BitOperation
-                  0x000662                  _TMR3_Period16BitSet
-                  0x000674                  _TMR3_Period16BitGet
-                  0x00067c                  _TMR3_Counter16BitSet
-                  0x00068e                  _TMR3_Counter16BitGet
-                  0x000696                  _TMR3_Start
-                  0x0006a4                  _TMR3_Stop
-                  0x0006ac                  _TMR3_GetElapsedThenClear
-                  0x0006c4                  _TMR3_SoftwareCounterGet
-                  0x0006d0                  _TMR3_SoftwareCounterClear
- .text            0x0006dc         0xa4 build/default/debug/pepin024_lab4_SONAR_v001.o
-                  0x0006dc                  _initPing
-                  0x000710                  _measRangeFinder
- .text            0x000780         0x80 build/default/debug/mcc_generated_files/ic1.o
-                  0x000780                  _IC1_Initialize
-                  0x000794                  _IC1_Tasks
-                  0x0007a4                  _IC1_Start
-                  0x0007be                  _IC1_Stop
-                  0x0007cc                  _IC1_CaptureDataRead
-                  0x0007d4                  _IC1_HasCaptureBufferOverflowed
-                  0x0007ec                  _IC1_IsCaptureBufferEmpty
- .text            0x000800         0x3a build/default/debug/mcc_generated_files/traps.o
-                  0x000800                  _TRAPS_halt_on_error
-                  0x000818                  __OscillatorFail
-                  0x000820                  __StackError
-                  0x00082a                  __AddressError
-                  0x000832                  __MathError
- .text            0x00083a         0x3a build/default/debug/_ext/736341408/pepin024_lab3_delay.o
-                  0x00083a                  _mSec
-                  0x000856                  _delay
- .text            0x000874         0x2e build/default/debug/mcc_generated_files/mcc.o
-                  0x000874                  _SYSTEM_Initialize
-                  0x000888                  _OSCILLATOR_Initialize
+.text             0x000490        0x5f4
+ .text            0x000490        0x18a build/default/debug/_ext/736341408/pepin024_lab4_LED_v001.o
+                  0x000490                  _initLED
+                  0x000498                  _writeColor
+                  0x000512                  _drawFrame
+                  0x000526                  _packColor
+                  0x000556                  _getR
+                  0x000564                  _getG
+                  0x000578                  _getB
+                  0x000584                  _writePacCol
+                  0x0005a8                  _Wheel
+ .text            0x00061a         0xe8 build/default/debug/mcc_generated_files/oc1.o
+                  0x00061a                  _OC1_Initialize
+                  0x000632                  _OC1_Tasks
+                  0x000642                  _OC1_Start
+                  0x00065c                  _OC1_Stop
+                  0x00066a                  _OC1_SingleCompareValueSet
+                  0x000676                  _OC1_DualCompareValueSet
+                  0x000688                  _OC1_CentreAlignedPWMConfig
+                  0x00069a                  _OC1_EdgeAlignedPWMConfig
+                  0x0006ac                  _OC1_SecondaryValueSet
+                  0x0006b8                  _OC1_PrimaryValueSet
+                  0x0006c4                  _OC1_IsCompareCycleComplete
+                  0x0006dc                  _OC1_FaultStatusGet
+ .text            0x000702         0xb2 build/default/debug/mcc_generated_files/tmr2.o
+                  0x000702                  _TMR2_Initialize
+                  0x000718                  _TMR2_Tasks_16BitOperation
+                  0x00073a                  _TMR2_Period16BitSet
+                  0x00074c                  _TMR2_Period16BitGet
+                  0x000754                  _TMR2_Counter16BitSet
+                  0x000766                  _TMR2_Counter16BitGet
+                  0x00076e                  _TMR2_Start
+                  0x00077c                  _TMR2_Stop
+                  0x000784                  _TMR2_GetElapsedThenClear
+                  0x00079c                  _TMR2_SoftwareCounterGet
+                  0x0007a8                  _TMR2_SoftwareCounterClear
+ .text            0x0007b4         0xb2 build/default/debug/mcc_generated_files/tmr3.o
+                  0x0007b4                  _TMR3_Initialize
+                  0x0007ca                  _TMR3_Tasks_16BitOperation
+                  0x0007ec                  _TMR3_Period16BitSet
+                  0x0007fe                  _TMR3_Period16BitGet
+                  0x000806                  _TMR3_Counter16BitSet
+                  0x000818                  _TMR3_Counter16BitGet
+                  0x000820                  _TMR3_Start
+                  0x00082e                  _TMR3_Stop
+                  0x000836                  _TMR3_GetElapsedThenClear
+                  0x00084e                  _TMR3_SoftwareCounterGet
+                  0x00085a                  _TMR3_SoftwareCounterClear
+ .text            0x000866         0xa4 build/default/debug/pepin024_lab4_SONAR_v001.o
+                  0x000866                  _initPing
+                  0x00089a                  _measRangeFinder
+ .text            0x00090a         0x80 build/default/debug/mcc_generated_files/ic1.o
+                  0x00090a                  _IC1_Initialize
+                  0x00091e                  _IC1_Tasks
+                  0x00092e                  _IC1_Start
+                  0x000948                  _IC1_Stop
+                  0x000956                  _IC1_CaptureDataRead
+                  0x00095e                  _IC1_HasCaptureBufferOverflowed
+                  0x000976                  _IC1_IsCaptureBufferEmpty
+ .text            0x00098a         0x58 build/default/debug/main.o
+                  0x00098a                  _main
+                  0x000994                  _setup
+                  0x0009d4                  _loop
+ .text            0x0009e2         0x3a build/default/debug/mcc_generated_files/traps.o
+                  0x0009e2                  _TRAPS_halt_on_error
+                  0x0009fa                  __OscillatorFail
+                  0x000a02                  __StackError
+                  0x000a0c                  __AddressError
+                  0x000a14                  __MathError
+ .text            0x000a1c         0x3a build/default/debug/_ext/736341408/pepin024_lab3_delay.o
+                  0x000a1c                  _mSec
+                  0x000a38                  _delay
+ .text            0x000a56         0x2e build/default/debug/mcc_generated_files/mcc.o
+                  0x000a56                  _SYSTEM_Initialize
+                  0x000a6a                  _OSCILLATOR_Initialize
 
-.dinit            0x0008a2         0x28
- .dinit           0x0008a2         0x28 data_init
+.dinit            0x000a84         0x28
+ .dinit           0x000a84         0x28 data_init
 
-.text             0x0008ca         0x66
- .text            0x0008ca         0x22 build/default/debug/main.o
-                  0x0008ca                  _main
-                  0x0008d4                  _setup
-                  0x0008de                  _loop
- .text            0x0008ec         0x20 build/default/debug/pepin024_lab4_SERVO_v001.o
-                  0x0008ec                  _initServo
-                  0x000900                  _setServo
- .text            0x00090c         0x1e build/default/debug/mcc_generated_files/pin_manager.o
-                  0x00090c                  _PIN_MANAGER_Initialize
- .text            0x00092a          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
-                  0x00092a                  _INTERRUPT_Initialize
+.text             0x000aac         0x68
+ .text            0x000aac         0x24 build/default/debug/pepin024_lab4_LED_v001.o
+                  0x000aac                  _writeHighBit
+                  0x000abc                  _writeLowBit
+                  0x000aca                  _wait_50_us
+ .text            0x000ad0         0x20 build/default/debug/pepin024_lab4_SERVO_v001.o
+                  0x000ad0                  _initServo
+                  0x000ae4                  _setServo
+ .text            0x000af0         0x1e build/default/debug/mcc_generated_files/pin_manager.o
+                  0x000af0                  _PIN_MANAGER_Initialize
+ .text            0x000b0e          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x000b0e                  _INTERRUPT_Initialize

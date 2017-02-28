@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/ic1.c mcc_generated_files/tmr2.c mcc_generated_files/tmr3.c mcc_generated_files/pin_manager.c mcc_generated_files/traps.c mcc_generated_files/oc1.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c main.c pepin024_lab4_SERVO_v001.c ../pepin024_lab3_v001.X/pepin024_lab3_delay.c pepin024_lab4_SONAR_v001.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/ic1.c mcc_generated_files/tmr2.c mcc_generated_files/tmr3.c mcc_generated_files/pin_manager.c mcc_generated_files/traps.c mcc_generated_files/oc1.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c main.c pepin024_lab4_SERVO_v001.c ../pepin024_lab3_v001.X/pepin024_lab3_delay.c pepin024_lab4_SONAR_v001.c pepin024_lab4_LED_v001.s ../pepin024_lab3_v001.X/pepin024_lab4_LED_v001.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/ic1.o ${OBJECTDIR}/mcc_generated_files/tmr2.o ${OBJECTDIR}/mcc_generated_files/tmr3.o ${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/oc1.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/main.o ${OBJECTDIR}/pepin024_lab4_SERVO_v001.o ${OBJECTDIR}/_ext/736341408/pepin024_lab3_delay.o ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/ic1.o.d ${OBJECTDIR}/mcc_generated_files/tmr2.o.d ${OBJECTDIR}/mcc_generated_files/tmr3.o.d ${OBJECTDIR}/mcc_generated_files/pin_manager.o.d ${OBJECTDIR}/mcc_generated_files/traps.o.d ${OBJECTDIR}/mcc_generated_files/oc1.o.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o.d ${OBJECTDIR}/mcc_generated_files/mcc.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/pepin024_lab4_SERVO_v001.o.d ${OBJECTDIR}/_ext/736341408/pepin024_lab3_delay.o.d ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/ic1.o ${OBJECTDIR}/mcc_generated_files/tmr2.o ${OBJECTDIR}/mcc_generated_files/tmr3.o ${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/oc1.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/main.o ${OBJECTDIR}/pepin024_lab4_SERVO_v001.o ${OBJECTDIR}/_ext/736341408/pepin024_lab3_delay.o ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o ${OBJECTDIR}/pepin024_lab4_LED_v001.o ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/ic1.o.d ${OBJECTDIR}/mcc_generated_files/tmr2.o.d ${OBJECTDIR}/mcc_generated_files/tmr3.o.d ${OBJECTDIR}/mcc_generated_files/pin_manager.o.d ${OBJECTDIR}/mcc_generated_files/traps.o.d ${OBJECTDIR}/mcc_generated_files/oc1.o.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o.d ${OBJECTDIR}/mcc_generated_files/mcc.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/pepin024_lab4_SERVO_v001.o.d ${OBJECTDIR}/_ext/736341408/pepin024_lab3_delay.o.d ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o.d ${OBJECTDIR}/pepin024_lab4_LED_v001.o.d ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/ic1.o ${OBJECTDIR}/mcc_generated_files/tmr2.o ${OBJECTDIR}/mcc_generated_files/tmr3.o ${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/oc1.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/main.o ${OBJECTDIR}/pepin024_lab4_SERVO_v001.o ${OBJECTDIR}/_ext/736341408/pepin024_lab3_delay.o ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/ic1.o ${OBJECTDIR}/mcc_generated_files/tmr2.o ${OBJECTDIR}/mcc_generated_files/tmr3.o ${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/oc1.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/main.o ${OBJECTDIR}/pepin024_lab4_SERVO_v001.o ${OBJECTDIR}/_ext/736341408/pepin024_lab3_delay.o ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o ${OBJECTDIR}/pepin024_lab4_LED_v001.o ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o
 
 # Source Files
-SOURCEFILES=mcc_generated_files/ic1.c mcc_generated_files/tmr2.c mcc_generated_files/tmr3.c mcc_generated_files/pin_manager.c mcc_generated_files/traps.c mcc_generated_files/oc1.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c main.c pepin024_lab4_SERVO_v001.c ../pepin024_lab3_v001.X/pepin024_lab3_delay.c pepin024_lab4_SONAR_v001.c
+SOURCEFILES=mcc_generated_files/ic1.c mcc_generated_files/tmr2.c mcc_generated_files/tmr3.c mcc_generated_files/pin_manager.c mcc_generated_files/traps.c mcc_generated_files/oc1.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c main.c pepin024_lab4_SERVO_v001.c ../pepin024_lab3_v001.X/pepin024_lab3_delay.c pepin024_lab4_SONAR_v001.c pepin024_lab4_LED_v001.s ../pepin024_lab3_v001.X/pepin024_lab4_LED_v001.c
 
 
 CFLAGS=
@@ -172,6 +172,13 @@ ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o: pepin024_lab4_SONAR_v001.c  nbproject/M
 	${MP_CC} $(MP_EXTRA_CC_PRE)  pepin024_lab4_SONAR_v001.c  -o ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/pepin024_lab4_SONAR_v001.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/pepin024_lab4_SONAR_v001.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o: ../pepin024_lab3_v001.X/pepin024_lab4_LED_v001.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/736341408" 
+	@${RM} ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o.d 
+	@${RM} ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../pepin024_lab3_v001.X/pepin024_lab4_LED_v001.c  -o ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/mcc_generated_files/ic1.o: mcc_generated_files/ic1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
@@ -257,12 +264,33 @@ ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o: pepin024_lab4_SONAR_v001.c  nbproject/M
 	${MP_CC} $(MP_EXTRA_CC_PRE)  pepin024_lab4_SONAR_v001.c  -o ${OBJECTDIR}/pepin024_lab4_SONAR_v001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/pepin024_lab4_SONAR_v001.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/pepin024_lab4_SONAR_v001.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o: ../pepin024_lab3_v001.X/pepin024_lab4_LED_v001.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/736341408" 
+	@${RM} ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o.d 
+	@${RM} ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../pepin024_lab3_v001.X/pepin024_lab4_LED_v001.c  -o ${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/736341408/pepin024_lab4_LED_v001.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/pepin024_lab4_LED_v001.o: pepin024_lab4_LED_v001.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/pepin024_lab4_LED_v001.o.d 
+	@${RM} ${OBJECTDIR}/pepin024_lab4_LED_v001.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  pepin024_lab4_LED_v001.s  -o ${OBJECTDIR}/pepin024_lab4_LED_v001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,-MD,"${OBJECTDIR}/pepin024_lab4_LED_v001.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/pepin024_lab4_LED_v001.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
 else
+${OBJECTDIR}/pepin024_lab4_LED_v001.o: pepin024_lab4_LED_v001.s  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/pepin024_lab4_LED_v001.o.d 
+	@${RM} ${OBJECTDIR}/pepin024_lab4_LED_v001.o 
+	${MP_CC} $(MP_EXTRA_AS_PRE)  pepin024_lab4_LED_v001.s  -o ${OBJECTDIR}/pepin024_lab4_LED_v001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,-MD,"${OBJECTDIR}/pepin024_lab4_LED_v001.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)
+	@${FIXDEPS} "${OBJECTDIR}/pepin024_lab4_LED_v001.o.d"  $(SILENT)  -rsi ${MP_CC_DIR}../  
+	
 endif
 
 # ------------------------------------------------------------------------------------

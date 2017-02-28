@@ -47,6 +47,7 @@
 #include "pepin024_lab4_SERVO_v001.h"
 #include "pepin024_lab4_SONAR_v001.h"
 #include "../pepin024_lab3_v001.X/pepin024_lab3_delay_v003.h"
+#include "../pepin024_lab3_v001.X/pepin024_lab4_LED_v001.h"
 
 void setup(void);
 void loop(void);
@@ -72,6 +73,10 @@ int main(void)
 void setup(void){
     initServo();
     initPing();
+    initLED();
+    
+    
+    
     return;
     
 }
@@ -81,6 +86,13 @@ void loop(void){
     test = measRangeFinder();
     asm("nop");
     asm("nop");
+    
+    int i;
+    for(i = 0; i < 255; i++){
+        writePacCol(Wheel(i));
+        delay(10);
+    }
+    
     return;
 }
 /**

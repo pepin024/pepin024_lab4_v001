@@ -2,6 +2,8 @@
 #include <p24Fxxxx.h>
 #include "../pepin024_lab3_v001.X/pepin024_lab3_delay_v003.h"
 
+#define CONVERSIONFACTOR 11.6  // 11.6 = (58 * 2)/10 to convert from us
+
 void initPing(void){
     TRISBbits.TRISB8 = 0;
     TRISBbits.TRISB9 = 1;
@@ -58,7 +60,7 @@ unsigned int measRangeFinder(void){
     
     unsigned int result = secondEdge - firstEdge;
     
-    result = result/11.6;  // 11.6 = (58 * 2)/10 to convert from us
+    result = result/CONVERSIONFACTOR;  // 11.6 = (58 * 2)/10 to convert from us
     
     return result; //result in mm
     

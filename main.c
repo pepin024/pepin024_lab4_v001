@@ -45,6 +45,7 @@
 #include <p24Fxxxx.h>
 #include "mcc_generated_files/mcc.h"
 #include "pepin024_lab4_SERVO_v001.h"
+#include "pepin024_lab4_SONAR_v001.h"
 #include "../pepin024_lab3_v001.X/pepin024_lab3_delay_v003.h"
 
 void setup(void);
@@ -70,14 +71,17 @@ int main(void)
 
 void setup(void){
     initServo();
+    initPing();
+    return;
     
 }
 
 void loop(void){
-    setServo(10000);
-    delay(1000);
-    setServo(30000);
-    delay(3000);
+    unsigned int test;
+    test = measRangeFinder();
+    asm("nop");
+    asm("nop");
+    return;
 }
 /**
  End of File

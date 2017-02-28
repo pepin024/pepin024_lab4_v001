@@ -13,6 +13,7 @@ extern "C" {
 #endif
 
     void initPing(void);
+    unsigned int measRangeFinder(void);
 
 
 #ifdef	__cplusplus

@@ -29,10 +29,33 @@ unsigned int measRangeFinder(void){
         int garbage = IC1BUF;
     }
     TMR2 = 0;
+    
+    
+    T1CON = 0; //set up timer for ~100 us pulse
+    TMR1 = 0;
+    PR1 = 200;
+    _T1IF = 0;
+    
+    
     T2CONbits.TON = 1;
     _ICM = 0x001;
     
-    //tbd
+    _RB8 = 1;
+    T1CON = 0x8001;
+    
+    while(!_T1IF);
+    _RB8 = 0;
+    
+    delay (100);
+    
+    unsigned int firstEdge, 
+        secondEdge;
+    
+    firstEdge = IC1BUF;
+    secondEdge = IC1BUF;
+    
+    unsigned int result = secondEdge - firstEdge;
+    return result;
     
     
 }

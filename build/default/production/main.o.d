@@ -9,4 +9,5 @@ mcc_generated_files/interrupt_manager.h  \
 mcc_generated_files/tmr3.h  \
  mcc_generated_files/tmr2.h  \
 pepin024_lab4_SERVO_v001.h  \
+ pepin024_lab4_SONAR_v001.h  \
  ../pepin024_lab3_v001.X/pepin024_lab3_delay_v003.h 

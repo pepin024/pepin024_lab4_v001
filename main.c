@@ -89,8 +89,9 @@ void loop(void){
     
     int color;
     asm("nop");
+    
     if(test < 100){
-        color = (test - 10)/3; //converts test to range[0-90]
+        color = (test - 10)*2.8333; //converts test to range[0-255]
         if(color <= 0){
             color = 0;
         }
@@ -99,6 +100,7 @@ void loop(void){
     else{
         writeColor(0,255,0);
     }
+     
     
     return;
 }

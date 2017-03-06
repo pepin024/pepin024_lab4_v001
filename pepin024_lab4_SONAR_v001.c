@@ -60,9 +60,9 @@ unsigned int measRangeFinder(void){
     
     unsigned int result = secondEdge - firstEdge;
     
-    result = result/CONVERSIONFACTOR;  // 11.6 = (58 * 2)/10 to convert from us
     
-    return result; //result in mm
+    result = ((result*0.0089)-2.2967)*10;
+    return result;
     
     
 }

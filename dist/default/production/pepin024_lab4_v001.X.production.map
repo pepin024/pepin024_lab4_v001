@@ -91,11 +91,11 @@ Program Memory  [Origin = 0x200, Length = 0xa9fc]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x372           0x52b  (1323)
-.text                        0x572               0x608           0x90c  (2316)
-.dinit                       0xb7a                0x28            0x3c  (60)
-.text                        0xba2                0x68            0x9c  (156)
+.text                        0x572               0x61a           0x927  (2343)
+.dinit                       0xb8c                0x28            0x3c  (60)
+.text                        0xbb4                0x68            0x9c  (156)
 
-                 Total program memory used (bytes):          0xf0f  (3855) 5%
+                 Total program memory used (bytes):          0xf2a  (3882) 5%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0xfc]
@@ -205,21 +205,21 @@ External Symbols in Program Memory (by address):
                   0x000a78                  _main
                   0x000a82                  _setup
                   0x000a8e                  _loop
-                  0x000ada                  _mSec
-                  0x000af6                  _delay
-                  0x000b2a                  __OscillatorFail
-                  0x000b32                  __StackError
-                  0x000b3c                  __AddressError
-                  0x000b44                  __MathError
-                  0x000b4c                  _SYSTEM_Initialize
-                  0x000b60                  _OSCILLATOR_Initialize
-                  0x000ba2                  _writeHighBit
-                  0x000bb2                  _writeLowBit
-                  0x000bc0                  _wait_50_us
-                  0x000bc6                  _initServo
-                  0x000bda                  _setServo
-                  0x000be6                  _PIN_MANAGER_Initialize
-                  0x000c04                  _INTERRUPT_Initialize
+                  0x000aec                  _mSec
+                  0x000b08                  _delay
+                  0x000b3c                  __OscillatorFail
+                  0x000b44                  __StackError
+                  0x000b4e                  __AddressError
+                  0x000b56                  __MathError
+                  0x000b5e                  _SYSTEM_Initialize
+                  0x000b72                  _OSCILLATOR_Initialize
+                  0x000bb4                  _writeHighBit
+                  0x000bc4                  _writeLowBit
+                  0x000bd2                  _wait_50_us
+                  0x000bd8                  _initServo
+                  0x000bec                  _setServo
+                  0x000bf8                  _PIN_MANAGER_Initialize
+                  0x000c16                  _INTERRUPT_Initialize
 
 External Symbols in Program Memory (by name):
 
@@ -230,7 +230,7 @@ External Symbols in Program Memory (by name):
                   0x000a1c                  _IC1_Start
                   0x000a36                  _IC1_Stop
                   0x000a0c                  _IC1_Tasks
-                  0x000c04                  _INTERRUPT_Initialize
+                  0x000c16                  _INTERRUPT_Initialize
                   0x00076a                  _OC1_CentreAlignedPWMConfig
                   0x000758                  _OC1_DualCompareValueSet
                   0x00077c                  _OC1_EdgeAlignedPWMConfig
@@ -243,9 +243,9 @@ External Symbols in Program Memory (by name):
                   0x000724                  _OC1_Start
                   0x00073e                  _OC1_Stop
                   0x000714                  _OC1_Tasks
-                  0x000b60                  _OSCILLATOR_Initialize
-                  0x000be6                  _PIN_MANAGER_Initialize
-                  0x000b4c                  _SYSTEM_Initialize
+                  0x000b72                  _OSCILLATOR_Initialize
+                  0x000bf8                  _PIN_MANAGER_Initialize
+                  0x000b5e                  _SYSTEM_Initialize
                   0x000848                  _TMR2_Counter16BitGet
                   0x000836                  _TMR2_Counter16BitSet
                   0x000866                  _TMR2_GetElapsedThenClear
@@ -269,11 +269,11 @@ External Symbols in Program Memory (by name):
                   0x000910                  _TMR3_Stop
                   0x0008ac                  _TMR3_Tasks_16BitOperation
                   0x00068a                  _Wheel
-                  0x000b3c                  __AddressError
+                  0x000b4e                  __AddressError
                   0x0002c8                  __DefaultInterrupt
-                  0x000b44                  __MathError
-                  0x000b2a                  __OscillatorFail
-                  0x000b32                  __StackError
+                  0x000b56                  __MathError
+                  0x000b3c                  __OscillatorFail
+                  0x000b44                  __StackError
                   0x0002d0                  ___addsf3
                   0x00038a                  ___fixsfsi
                   0x0003cc                  ___fixunssfsi
@@ -291,25 +291,25 @@ External Symbols in Program Memory (by name):
                   0x00047c                  __funpack2
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x000af6                  _delay
+                  0x000b08                  _delay
                   0x0005f4                  _drawFrame
                   0x00065a                  _getB
                   0x000646                  _getG
                   0x000638                  _getR
                   0x000572                  _initLED
                   0x000948                  _initPing
-                  0x000bc6                  _initServo
+                  0x000bd8                  _initServo
                   0x000a8e                  _loop
-                  0x000ada                  _mSec
+                  0x000aec                  _mSec
                   0x000a78                  _main
                   0x00097c                  _measRangeFinder
                   0x000608                  _packColor
-                  0x000bda                  _setServo
+                  0x000bec                  _setServo
                   0x000a82                  _setup
-                  0x000bc0                  _wait_50_us
+                  0x000bd2                  _wait_50_us
                   0x00057a                  _writeColor
-                  0x000ba2                  _writeHighBit
-                  0x000bb2                  _writeLowBit
+                  0x000bb4                  _writeHighBit
+                  0x000bc4                  _writeLowBit
                   0x000666                  _writePacCol
 
 Memory Configuration
@@ -462,7 +462,7 @@ __CONFIG1
  .debug_abbrev    0x000a96         0x14 build/default/production/pepin024_lab4_LED_v001.o
  .debug_abbrev    0x000aaa         0xe5 build/default/production/_ext/736341408/pepin024_lab4_LED_v001.o
 
-.debug_line       0x000000        0xbd6
+.debug_line       0x000000        0xbd9
  *(.debug_line)
  .debug_line      0x000000        0x112 build/default/production/mcc_generated_files/ic1.o
  .debug_line      0x000112        0x127 build/default/production/mcc_generated_files/tmr2.o
@@ -472,12 +472,12 @@ __CONFIG1
  .debug_line      0x000530        0x134 build/default/production/mcc_generated_files/oc1.o
  .debug_line      0x000664         0x55 build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_line      0x0006b9        0x107 build/default/production/mcc_generated_files/mcc.o
- .debug_line      0x0007c0         0x49 build/default/production/main.o
- .debug_line      0x000809         0xa9 build/default/production/pepin024_lab4_SERVO_v001.o
- .debug_line      0x0008b2         0xc1 build/default/production/_ext/736341408/pepin024_lab3_delay.o
- .debug_line      0x000973         0xc8 build/default/production/pepin024_lab4_SONAR_v001.o
- .debug_line      0x000a3b         0x56 build/default/production/pepin024_lab4_LED_v001.o
- .debug_line      0x000a91        0x145 build/default/production/_ext/736341408/pepin024_lab4_LED_v001.o
+ .debug_line      0x0007c0         0x4c build/default/production/main.o
+ .debug_line      0x00080c         0xa9 build/default/production/pepin024_lab4_SERVO_v001.o
+ .debug_line      0x0008b5         0xc1 build/default/production/_ext/736341408/pepin024_lab3_delay.o
+ .debug_line      0x000976         0xc8 build/default/production/pepin024_lab4_SONAR_v001.o
+ .debug_line      0x000a3e         0x56 build/default/production/pepin024_lab4_LED_v001.o
+ .debug_line      0x000a94        0x145 build/default/production/_ext/736341408/pepin024_lab4_LED_v001.o
 
 .debug_frame      0x000000        0x85a
  *(.debug_frame)
@@ -1284,7 +1284,7 @@ __c30_signature
 .config_IESO      0x00abfc          0x2
  .config_IESO     0x00abfc          0x2 build/default/production/mcc_generated_files/mcc.o
 
-.text             0x000572        0x608
+.text             0x000572        0x61a
  .text            0x000572        0x18a build/default/production/_ext/736341408/pepin024_lab4_LED_v001.o
                   0x000572                  _initLED
                   0x00057a                  _writeColor
@@ -1343,35 +1343,35 @@ __c30_signature
                   0x000a44                  _IC1_CaptureDataRead
                   0x000a4c                  _IC1_HasCaptureBufferOverflowed
                   0x000a64                  _IC1_IsCaptureBufferEmpty
- .text            0x000a78         0x62 build/default/production/main.o
+ .text            0x000a78         0x74 build/default/production/main.o
                   0x000a78                  _main
                   0x000a82                  _setup
                   0x000a8e                  _loop
- .text            0x000ada         0x3a build/default/production/_ext/736341408/pepin024_lab3_delay.o
-                  0x000ada                  _mSec
-                  0x000af6                  _delay
- .text            0x000b14         0x38 build/default/production/mcc_generated_files/traps.o
-                  0x000b14                  _TRAPS_halt_on_error
-                  0x000b2a                  __OscillatorFail
-                  0x000b32                  __StackError
-                  0x000b3c                  __AddressError
-                  0x000b44                  __MathError
- .text            0x000b4c         0x2e build/default/production/mcc_generated_files/mcc.o
-                  0x000b4c                  _SYSTEM_Initialize
-                  0x000b60                  _OSCILLATOR_Initialize
+ .text            0x000aec         0x3a build/default/production/_ext/736341408/pepin024_lab3_delay.o
+                  0x000aec                  _mSec
+                  0x000b08                  _delay
+ .text            0x000b26         0x38 build/default/production/mcc_generated_files/traps.o
+                  0x000b26                  _TRAPS_halt_on_error
+                  0x000b3c                  __OscillatorFail
+                  0x000b44                  __StackError
+                  0x000b4e                  __AddressError
+                  0x000b56                  __MathError
+ .text            0x000b5e         0x2e build/default/production/mcc_generated_files/mcc.o
+                  0x000b5e                  _SYSTEM_Initialize
+                  0x000b72                  _OSCILLATOR_Initialize
 
-.dinit            0x000b7a         0x28
- .dinit           0x000b7a         0x28 data_init
+.dinit            0x000b8c         0x28
+ .dinit           0x000b8c         0x28 data_init
 
-.text             0x000ba2         0x68
- .text            0x000ba2         0x24 build/default/production/pepin024_lab4_LED_v001.o
-                  0x000ba2                  _writeHighBit
-                  0x000bb2                  _writeLowBit
-                  0x000bc0                  _wait_50_us
- .text            0x000bc6         0x20 build/default/production/pepin024_lab4_SERVO_v001.o
-                  0x000bc6                  _initServo
-                  0x000bda                  _setServo
- .text            0x000be6         0x1e build/default/production/mcc_generated_files/pin_manager.o
-                  0x000be6                  _PIN_MANAGER_Initialize
- .text            0x000c04          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x000c04                  _INTERRUPT_Initialize
+.text             0x000bb4         0x68
+ .text            0x000bb4         0x24 build/default/production/pepin024_lab4_LED_v001.o
+                  0x000bb4                  _writeHighBit
+                  0x000bc4                  _writeLowBit
+                  0x000bd2                  _wait_50_us
+ .text            0x000bd8         0x20 build/default/production/pepin024_lab4_SERVO_v001.o
+                  0x000bd8                  _initServo
+                  0x000bec                  _setServo
+ .text            0x000bf8         0x1e build/default/production/mcc_generated_files/pin_manager.o
+                  0x000bf8                  _PIN_MANAGER_Initialize
+ .text            0x000c16          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000c16                  _INTERRUPT_Initialize

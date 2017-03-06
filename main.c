@@ -101,6 +101,10 @@ void loop(void){
         writeColor(0,255,0);
     }
      
+    if(test < 40)
+        setServo(2666);
+    else
+        setServo(4000);
     
     return;
 }
